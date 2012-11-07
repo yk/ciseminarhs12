@@ -11,6 +11,9 @@
 \begin{document}
 \maketitle
 \section{Excercise 1}
+The Histogram of a nice, contranst rich picture is broad and relatively flat, all photographers know that. Images with a narrow histogram such as can be seen in Fig. \ref{fig:eq} a), usually lack contrast. Histogram equalization is an important technique to enhance contrast. It is a technique, where intensities of pixels will be mapped to different values such that the histogram of the transformed image will look flatter. Ideally, a histogram should resemble a uniform distribution after the transformation. This cannot be obtained bc of the intensities can only take discrete values (compare Fig.\ref{fig:eq}d). Nevertheless, histogram equalization improves contrast and image quality markedly, as can be seen in Fig. \ref{fig:eq}b).
+
+
 
 \begin{figure}%
 \centering
@@ -32,12 +35,12 @@ In this exercise we are presented with two images of the same scene. Artificial 
 \paragraph{Blur}
 The blur filter or normalized box filter is the most simple linear filter. Each output pixel is just the mean of all $n*n$ pixel surrounding it.
 \paragraph{Gaussian Blur}
-Another frequently used linear filter. The value of each output pixel is now determined by the weighted mean of its neighbours. The weights are determined by a bivariate gaussian distribution.
+Another frequently used linear filter. The value of each output pixel is now determined by the weighted mean of its neighbours. The weights are determined by a bivariate gaussian distribution. It is probably one of the most frequently used filters for noise reduction.	
 \paragraph{Median Blur}
 The median blur is a non linear filter, since the computation of the median is a non-linear operation. The value of an output pixel is determined by the median of its surrounding neigbours.
 
 \subsection{Applying the filters}
-The results of applying the normalized box filter can be seen in \ref{fig:blur}. I used the function \textit{blur} of the OpenCV API to apply blur filters of different kernel size. Only the images for the 3x3 and the 9x9 kernels are shown. Similarly, the application of the gaussian filter can be seen in \ref{fig:gblur}, and the results of the median filters is shown in \ref{fig:mblur}.
+The results of applying the normalized box filter can be seen in Fig.\ref{fig:blur}. I used the function \textit{blur} of the OpenCV API to apply blur filters of different kernel size. Only the images for the 3x3 and the 9x9 kernels are shown. Similarly, the application of the gaussian filter can be seen in Fig.\ref{fig:gblur}, and the results of the median filters is shown in Fig. \ref{fig:mblur}.
 
 \begin{figure}%
 \centering
@@ -96,6 +99,23 @@ The results of applying the normalized box filter can be seen in \ref{fig:blur}.
 \label{fig:mblur}%
 \end{figure}
 
+\subsection{Filter Effects}
+Both the blur filter and the gaussian work well to reduce noise in the image 1. I found that a 5x5 kernel size works very well to reduce the artificially introduced random noise. The gaussian filter seems to introduce less blurring of the features for equal kernel size compared to the blur filter (compare Fig.\ref{fig:blur}e and Fig.\ref{fig:gblur}e). Which makes sense, since neighbours closer to the center pixel are weighted stronger. Neither of the linear filter works well for Image two with "salt and pepper" noise. Although the specs are reduced, they are still clearly visible. 
+
+This is expected, since these erroneous pixels are usually far away from their true value, which will pull the unweighted or weighted means as well. For random noise, the observed value is ususally close to the actual value, the mean based filters therefor work well.
+These shortcomings are avoided by the median filter, since the median is in general less affected by outliers such as the ones produced by the salt and pepper noise.
+
+All the filters make use of the fact that usually the intensity of a single pixel strongly correlates with the intensity of its neighbours.
+
+
+
+\subsection{The Laplacian}
+Edge detection is a very important and frequently encountered problem in image processing. Detecting edges in visual scenes seems to be a very trivial task for us. But what actually "makes" an edge? If we look at the pixel intensity of an image, edges are characterized by a very fast change of intensity over space. If we look at the one dimensional case and model pixel intensity by $I(x)$, finding edges corresponds to finding maximas in $\dot{I}(x)$ or finding $x$ such that $\ddot{I}(x) = 0$. In two dimensional images, this corresponds to applying the laplacian operator to the two dimensional intensity function and finding the zero crossings.:
+\begin{equation}
+\nabla I=\frac{\delta^{2} I}{\delta x^{2}} + \frac{\delta^{2} I}{\delta y^{2}}
+\end{equation}
+
+Fig. \ref{fig:lap} shows the laplacian of an image and the difference to the original.
 
 \begin{figure}%
 \centering
@@ -105,12 +125,9 @@ The results of applying the normalized box filter can be seen in \ref{fig:blur}.
 \quad
 \subfloat[]["Difference"]{\includegraphics[scale=.35]{pics/office_dif.png}}
 
-\caption{Laplace Transformation. The office image before and after subtraction of the laplacian transformation of the image. The laplacian transformation of the intensity calculates the second derivative and can be used to detect edges.}%
+\caption{Laplace Operator. a) Original Picture. b) White pixels denote zero values of the laplacian. c) Difference between the original picture and the laplacian. Edges seem to be enhanced.}%
 \label{fig:lap}%
 \end{figure}
 
-\subsection{The Laplacian}
-Edge detection is a very important and frequently encountered problem in image processing. Detecting edges in visual scenes seems to be a very trivial task for us. But what actually "makes" an edge? If we look at the pixel intensity of an image, edges are characterized by a very fast change of intensity over space. If we look at the one dimensional case and model pixel intensity by $I(x)$, finding edges corresponds to finding maximas in $\dot{I}(x)$ or finding $x$ such that $\ddot{I}(x) = 0$. In two dimensional images, this corresponds to computing the laplacian
-There are several ways of detecting edges in images,
 
 \end{document}
