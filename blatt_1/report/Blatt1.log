@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  5 NOV 2012 13:02
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  8 NOV 2012 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -281,25 +281,25 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 File: pics/neuron_orig.png Graphic file (type png)
 
 <use pics/neuron_orig.png>
-Package pdftex.def Info: pics/neuron_orig.png used on input line 22.
+Package pdftex.def Info: pics/neuron_orig.png used on input line 20.
 (pdftex.def)             Requested size: 148.55235pt x 158.18819pt.
  <pics/neuron_eq.png, id=2, 373.395pt x 391.4625pt>
 File: pics/neuron_eq.png Graphic file (type png)
 
 <use pics/neuron_eq.png>
-Package pdftex.def Info: pics/neuron_eq.png used on input line 24.
+Package pdftex.def Info: pics/neuron_eq.png used on input line 22.
 (pdftex.def)             Requested size: 149.35535pt x 156.58221pt.
  <pics/hist_orig.png, id=3, 513.92pt x 406.51875pt>
 File: pics/hist_orig.png Graphic file (type png)
 
 <use pics/hist_orig.png>
-Package pdftex.def Info: pics/hist_orig.png used on input line 26.
+Package pdftex.def Info: pics/hist_orig.png used on input line 24.
 (pdftex.def)             Requested size: 154.17719pt x 121.95656pt.
  <pics/hist_eq.png, id=4, 512.91624pt x 401.5pt>
 File: pics/hist_eq.png Graphic file (type png)
 
 <use pics/hist_eq.png>
-Package pdftex.def Info: pics/hist_eq.png used on input line 28.
+Package pdftex.def Info: pics/hist_eq.png used on input line 26.
 (pdftex.def)             Requested size: 153.87605pt x 120.45091pt.
  [1
 
@@ -310,119 +310,119 @@ _eq.png>]
 File: pics/office-noisy-1.jpg Graphic file (type jpg)
 
 <use pics/office-noisy-1.jpg>
-Package pdftex.def Info: pics/office-noisy-1.jpg used on input line 49.
+Package pdftex.def Info: pics/office-noisy-1.jpg used on input line 47.
 (pdftex.def)             Requested size: 128.47968pt x 128.47968pt.
 
 <pics/office-noisy-2.jpg, id=22, 256.96pt x 256.96pt>
 File: pics/office-noisy-2.jpg Graphic file (type jpg)
 
 <use pics/office-noisy-2.jpg>
-Package pdftex.def Info: pics/office-noisy-2.jpg used on input line 51.
+Package pdftex.def Info: pics/office-noisy-2.jpg used on input line 49.
 (pdftex.def)             Requested size: 128.47968pt x 128.47968pt.
 
 <pics/1blur_5.png, id=23, 253.94875pt x 257.96375pt>
 File: pics/1blur_5.png Graphic file (type png)
  <use pics/1blur_5.png>
-Package pdftex.def Info: pics/1blur_5.png used on input line 53.
+Package pdftex.def Info: pics/1blur_5.png used on input line 51.
 (pdftex.def)             Requested size: 126.97406pt x 128.98155pt.
 
 <pics/2blur_5.png, id=24, 256.96pt x 258.9675pt>
 File: pics/2blur_5.png Graphic file (type png)
  <use pics/2blur_5.png>
-Package pdftex.def Info: pics/2blur_5.png used on input line 55.
+Package pdftex.def Info: pics/2blur_5.png used on input line 53.
 (pdftex.def)             Requested size: 128.47968pt x 129.48341pt.
 
 <pics/1blur_9.png, id=25, 253.94875pt x 255.95625pt>
 File: pics/1blur_9.png Graphic file (type png)
  <use pics/1blur_9.png>
-Package pdftex.def Info: pics/1blur_9.png used on input line 57.
+Package pdftex.def Info: pics/1blur_9.png used on input line 55.
 (pdftex.def)             Requested size: 126.97406pt x 127.9778pt.
 
 <pics/2blur_9.png, id=26, 255.95625pt x 254.9525pt>
 File: pics/2blur_9.png Graphic file (type png)
  <use pics/2blur_9.png>
-Package pdftex.def Info: pics/2blur_9.png used on input line 59.
+Package pdftex.def Info: pics/2blur_9.png used on input line 57.
 (pdftex.def)             Requested size: 127.9778pt x 127.47592pt.
 File: pics/office-noisy-1.jpg Graphic file (type jpg)
 
 <use pics/office-noisy-1.jpg>
-Package pdftex.def Info: pics/office-noisy-1.jpg used on input line 68.
+Package pdftex.def Info: pics/office-noisy-1.jpg used on input line 66.
 (pdftex.def)             Requested size: 128.47968pt x 128.47968pt.
 File: pics/office-noisy-2.jpg Graphic file (type jpg)
  <use pics/office-noisy-2.jpg>
-Package pdftex.def Info: pics/office-noisy-2.jpg used on input line 70.
+Package pdftex.def Info: pics/office-noisy-2.jpg used on input line 68.
 (pdftex.def)             Requested size: 128.47968pt x 128.47968pt.
 
 <pics/1gauss_5.png, id=27, 254.9525pt x 254.9525pt>
 File: pics/1gauss_5.png Graphic file (type png)
  <use pics/1gauss_5.png>
-Package pdftex.def Info: pics/1gauss_5.png used on input line 72.
+Package pdftex.def Info: pics/1gauss_5.png used on input line 70.
 (pdftex.def)             Requested size: 127.47592pt x 127.47592pt.
 
 <pics/2gauss_5.png, id=28, 257.96375pt x 257.96375pt>
 File: pics/2gauss_5.png Graphic file (type png)
  <use pics/2gauss_5.png>
-Package pdftex.def Info: pics/2gauss_5.png used on input line 74.
+Package pdftex.def Info: pics/2gauss_5.png used on input line 72.
 (pdftex.def)             Requested size: 128.98155pt x 128.98155pt.
 
 <pics/1gauss_9.png, id=29, 254.9525pt x 255.95625pt>
 File: pics/1gauss_9.png Graphic file (type png)
  <use pics/1gauss_9.png>
-Package pdftex.def Info: pics/1gauss_9.png used on input line 76.
+Package pdftex.def Info: pics/1gauss_9.png used on input line 74.
 (pdftex.def)             Requested size: 127.47592pt x 127.9778pt.
 
 <pics/2gauss_9.png, id=30, 257.96375pt x 256.96pt>
 File: pics/2gauss_9.png Graphic file (type png)
  <use pics/2gauss_9.png>
-Package pdftex.def Info: pics/2gauss_9.png used on input line 78.
+Package pdftex.def Info: pics/2gauss_9.png used on input line 76.
 (pdftex.def)             Requested size: 128.98155pt x 128.47968pt.
 File: pics/office-noisy-1.jpg Graphic file (type jpg)
 
 <use pics/office-noisy-1.jpg>
-Package pdftex.def Info: pics/office-noisy-1.jpg used on input line 87.
+Package pdftex.def Info: pics/office-noisy-1.jpg used on input line 85.
 (pdftex.def)             Requested size: 128.47968pt x 128.47968pt.
 File: pics/office-noisy-2.jpg Graphic file (type jpg)
  <use pics/office-noisy-2.jpg>
-Package pdftex.def Info: pics/office-noisy-2.jpg used on input line 89.
+Package pdftex.def Info: pics/office-noisy-2.jpg used on input line 87.
 (pdftex.def)             Requested size: 128.47968pt x 128.47968pt.
 
 <pics/2med_3.png, id=31, 259.97125pt x 256.96pt>
 File: pics/2med_3.png Graphic file (type png)
  <use pics/2med_3.png>
-Package pdftex.def Info: pics/2med_3.png used on input line 91.
+Package pdftex.def Info: pics/2med_3.png used on input line 89.
 (pdftex.def)             Requested size: 129.9853pt x 128.47968pt.
 File: pics/2med_3.png Graphic file (type png)
 
 <use pics/2med_3.png>
-Package pdftex.def Info: pics/2med_3.png used on input line 93.
+Package pdftex.def Info: pics/2med_3.png used on input line 91.
 (pdftex.def)             Requested size: 129.9853pt x 128.47968pt.
  <pics/1med_9.png, id=32, 256.96pt x 256.96pt>
 File: pics/1med_9.png Graphic file (type png)
 
 <use pics/1med_9.png>
-Package pdftex.def Info: pics/1med_9.png used on input line 95.
+Package pdftex.def Info: pics/1med_9.png used on input line 93.
 (pdftex.def)             Requested size: 128.47968pt x 128.47968pt.
  <pics/2med_9.png, id=33, 256.96pt x 255.95625pt>
 File: pics/2med_9.png Graphic file (type png)
 
 <use pics/2med_9.png>
-Package pdftex.def Info: pics/2med_9.png used on input line 97.
+Package pdftex.def Info: pics/2med_9.png used on input line 95.
 (pdftex.def)             Requested size: 128.47968pt x 127.9778pt.
  <pics/office_orig.png, id=34, 256.96pt x 258.9675pt>
 File: pics/office_orig.png Graphic file (type png)
 
 <use pics/office_orig.png>
-Package pdftex.def Info: pics/office_orig.png used on input line 124.
+Package pdftex.def Info: pics/office_orig.png used on input line 122.
 (pdftex.def)             Requested size: 89.93733pt x 90.63997pt.
 
 <pics/office_lap.png, id=35, 253.94875pt x 253.94875pt>
 File: pics/office_lap.png Graphic file (type png)
 
 <use pics/office_lap.png>
-Package pdftex.def Info: pics/office_lap.png used on input line 126.
+Package pdftex.def Info: pics/office_lap.png used on input line 124.
 (pdftex.def)             Requested size: 88.88338pt x 88.88338pt.
 
-Underfull \hbox (badness 2293) in paragraph at lines 126--126
+Underfull \hbox (badness 2293) in paragraph at lines 124--124
 []\OT1/cmr/m/n/9 (b) |"Laplace Trans-
  []
 
@@ -430,7 +430,7 @@ Underfull \hbox (badness 2293) in paragraph at lines 126--126
 File: pics/office_dif.png Graphic file (type png)
 
 <use pics/office_dif.png>
-Package pdftex.def Info: pics/office_dif.png used on input line 128.
+Package pdftex.def Info: pics/office_dif.png used on input line 126.
 (pdftex.def)             Requested size: 90.28865pt x 90.99129pt.
  [3] [4 <./pics/office-noisy-1.jpg> <./pics/office-noisy-2.jpg> <./pics/1blur_5
 .png> <./pics/2blur_5.png> <./pics/1blur_9.png> <./pics/2blur_9.png>] [5 <./pic
@@ -441,11 +441,11 @@ office_orig.png> <./pics/office_lap.png> <./pics/office_dif.png>] (./Blatt1.aux
 Here is how much of TeX's memory you used:
  3884 strings out of 493633
  56710 string characters out of 3143377
- 128044 words of memory out of 3000000
+ 128060 words of memory out of 3000000
  7109 multiletter control sequences out of 15000+200000
  11997 words of font info for 45 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 44i,9n,45p,742b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,9n,45p,760b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
@@ -456,7 +456,7 @@ local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
 al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
 texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Blatt1.pdf (7 pages, 1201211 bytes).
+Output written on Blatt1.pdf (7 pages, 1201651 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  48 compressed objects within 1 object stream
