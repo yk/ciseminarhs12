@@ -76,4 +76,37 @@ imagesize&spatial domain&frequency domain\\\hline
 \end{table}
 \\
 Theoretically, the spatial convolution should be faster on small images, as the fourier transformation takes time, but slower on large images, as it is less efficient than the frequency convolution complexity-wise.
+
+\subsection{e}
+In this excercise we were asked to apply an ideal low pass filter in the frequency domain to a striped image (see Fig. \ref{fig:a1a}. Conceptually the striped can be thought of as square wave. The equation for a 1D square wave is as follows:
+\begin{equation}
+x(t)=\frac{4}{\pi}(sin(2*\pi*f*t)+\frac{1}{3}sin(6*\pi*f*t)*...)
+\end{equation}
+
+From this it becomes obvious, that removing the higher frequency terms will result in a smoother wave like pattern. This is what we observe in Fig. \ref{fig:a1e}. If only very low frequencies are allowed to pass, such as in Fig.\ref{fig:a1e}a), the image becomes very blury (see Fig.\ref{fig:a1e}b)). Whereas for larger filters, effects are less pronounced (Fig.\ref{fig:a1e}e) and f)).
+
+Also observed are ringing artefacts. These are due to the sharp cut off in the frequency domain filter, therefore inherent to the filter design. Ringing can be reduced by using filters which have a smoother cutoff edge. 
+
+
+\begin{figure}%
+\centering
+\subfloat[][Filter $r=5$]{\includegraphics[scale=.2]{res/filt_5.png}}
+\quad
+\subfloat[][Filtered Image]{\includegraphics[scale=.2]{res/filtIm_5.png}}
+
+\subfloat[][Filter $r=20$]{\includegraphics[scale=.2]{res/filt_20.png}}
+\quad
+\subfloat[][Filtered Image]{\includegraphics[scale=.2]{res/filtIm_20.png}}
+
+\subfloat[][Filter $r=50$]{\includegraphics[scale=.2]{res/filt_50.png}}
+\quad
+\subfloat[][Filtered Image]{\includegraphics[scale=.2]{res/filtIm_50.png}}
+
+
+\caption{Application of a low pass filter to a striped image.The original image is a rotated square wave pattern. Removing higher frequencies results in a pattern resembling a smoother wave. Also notice the ringing artefacts.}%
+\label{fig:a1e}%
+\end{figure}
+
+
+
 \end{document}

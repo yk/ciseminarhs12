@@ -6,8 +6,8 @@
 using namespace cv;
 using namespace std;
 
-Mat shift(Mat& magI){
-    magI = magI(Rect(0, 0, magI.cols, magI.rows));
+Mat shift(Mat& mag){
+    Mat magI = mag(Rect(0, 0, mag.cols, mag.rows));
     int cx = magI.cols/2;
     int cy = magI.rows/2;
     Mat q0(magI, Rect(0, 0, cx, cy)); // Top-Left - Create a ROI per quadrant
@@ -61,13 +61,13 @@ Mat freqConv(Mat& h, Mat& v){
     dft(vf,vf);
     mulSpectrums(hf,vf,hf,0);
     idft(hf,hf,DFT_SCALE);
-
+    
     return hf;
 }
 
 Mat convolveDFT(Mat& A, Mat& B)
 {
-  
+    
     Mat C(A.rows,A.cols,A.type());
     // reallocate the output array if needed
     
@@ -96,7 +96,7 @@ Mat convolveDFT(Mat& A, Mat& B)
     mulSpectrums(tempA, tempB, tempA,0);
     
     // transform the product back from the frequency domain.
- 
+    
     //dft(tempA, tempA, DFT_INVERSE + DFT_SCALE);
     idft(tempA,tempA,DFT_SCALE);
     // now copy the result back to C.
@@ -167,38 +167,102 @@ void a1d(){
     cout << double(clock()-begin)/CLOCKS_PER_SEC << endl;
 }
 
-Mat generateLowPass(Size_<int>& s, int cutoff ){
-    Mat filter(s,CV_32FC1,Scalar::all(0));
-    int c_0=s.width/2;
-    int r_0 = s.height/2;
-    cout<<c_0;
-    for (int r = 0; r<s.height;r++){
-        for (int c = 0; c<s.width; c++) {
-            if(sqrt((r-r_0)^2+(c-c_0)^2)<cutoff){
-                filter.at<float>(r,c)=1;
+void generateLowPass(Mat& filter, int cutoff ){
+    Mat planes[] = {Mat_<float>(filter),Mat::zeros(filter.size(),CV_32F)};
+    
+    
+    split(filter,planes);
+    
+    
+    int c_0=filter.cols/2;
+    int r_0 = filter.rows/2;
+    
+    for (int r = 0; r<filter.rows;r++){
+        for (int c = 0; c<filter.cols; c++) {
+            
+            double dist = sqrt((r-r_0)*(r-r_0)+(c-c_0)*(c-c_0));
+            
+            if(dist < cutoff){
+                
+                planes[0].at<float>(r,c)=1;
             }else{
-                filter.at<float>(r,c)=0;
+                planes[0].at<float>(r,c)=0;
             }
             
         }
     }
+    merge(planes,2,filter);
     
-    return filter;
+    return;
 }
+
+void displayFourier(const string& winname, Mat shifted){
+    Mat planes[] = {Mat_<float>(shifted),Mat::zeros(shifted.size(),CV_32F)};
+    
+    
+    split(shifted,planes);
+    Mat magI;
+    magnitude(planes[0],planes[1],magI);
+    log(magI,magI);
+    normalize(magI,magI,0,1,CV_MINMAX);
+    
+    
+    imshow(winname,magI);
+    waitKey();
+}
+
+
 
 void a1e(){
     Mat img = imread("../data/striped-lines.png",CV_LOAD_IMAGE_GRAYSCALE);
     Mat imgf;
-    img.convertTo(imgf,CV_32F);
+    Mat filteredImage;
+    
+    
+    
+    //img.convertTo(imgf,CV_32F);
+    
+    Mat planes[] = {Mat_<float>(img),Mat::zeros(img.size(),CV_32F)};
+    
+    merge(planes,2,imgf);
+    
+    //cout<<imgf.type()<<endl;
+    
+    //fourier transform
     dft(imgf,imgf);
-    
+    cout<<imgf.channels()<<endl;
     //create filter
-    Size s(imgf.cols,imgf.rows);
-    Mat f = generateLowPass(s, 13);
-    idft(imgf,imgf,DFT_SCALE);
-    imshow("filter",f);
     
-    imshow("Result1",imgf);//strange
+    Size s(imgf.cols,imgf.rows);
+    
+    Mat filter(s,imgf.type(),Scalar::all(0));
+    cout<<filter.channels();
+    
+    generateLowPass(filter, 100);
+    //shift the image
+    displayFourier("Filter",filter);
+    
+    Mat filt = shift(imgf);
+    //multiply filter
+    
+    displayFourier("original Fourier", filt);
+    
+    mulSpectrums(filt, filter, filt, 0);
+    
+    displayFourier("Filtered Fourier Magnitude",filt);
+    
+    
+    //unshift
+    filt = shift(filt);
+    
+    
+    
+    
+    idft(filt,filteredImage,DFT_SCALE+DFT_REAL_OUTPUT);
+    cout<<filteredImage.channels();
+    normalize(filteredImage,filteredImage,0,1,CV_MINMAX);
+    
+    imshow("Result1",filteredImage);//strange
     waitKey();
     
 }

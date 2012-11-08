@@ -1,0 +1,400 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  8 NOV 2012 21:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Blatt2.tex
+(./Blatt2.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/latin5.def
+File: latin5.def 2008/03/30 v1.1d Input encoding file
+))
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/english.ldf
+Language: english 2005/03/30 v3.3o English support from the babel system
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen104
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen105
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen106
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks17
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks18
+\eqnshift@=\dimen107
+\alignsep@=\dimen108
+\tagshift@=\dimen109
+\tagwidth@=\dimen110
+\totwidth@=\dimen111
+\lineht@=\dimen112
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count100
+))
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2010/01/09 v3.1m Customizing captions (AR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
+\captionmargin=\dimen115
+\captionmargin@=\dimen116
+\captionwidth=\dimen117
+\caption@indent=\dimen118
+\caption@parindent=\dimen119
+\caption@hangindent=\dimen120
+)
+\c@ContinuedFloat=\count101
+)
+\c@KVtest=\count102
+\sf@farskip=\skip46
+\sf@captopadj=\dimen121
+\sf@capskip=\skip47
+\sf@nearskip=\skip48
+\c@subfigure=\count103
+\c@subfigure@save=\count104
+\c@lofdepth=\count105
+\c@subtable=\count106
+\c@subtable@save=\count107
+\c@lotdepth=\count108
+\sf@top=\skip49
+\sf@bottom=\skip50
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(./Blatt2.aux)
+\openout1 = `Blatt2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen122
+\scratchbox=\box28
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen123
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks23
+) (/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
+LaTeX Info: Redefining \subref on input line 12.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+<res/striped-lines.png, id=1, 702.625pt x 702.625pt>
+File: res/striped-lines.png Graphic file (type png)
+
+<use res/striped-lines.png>
+Package pdftex.def Info: res/striped-lines.png used on input line 21.
+(pdftex.def)             Requested size: 210.78912pt x 210.78912pt.
+ <res/a1phase.png, id=2, 526.96875pt x 526.96875pt>
+File: res/a1phase.png Graphic file (type png)
+
+<use res/a1phase.png>
+Package pdftex.def Info: res/a1phase.png used on input line 23.
+(pdftex.def)             Requested size: 158.09184pt x 158.09184pt.
+ <res/a1mag.png, id=3, 526.96875pt x 526.96875pt>
+File: res/a1mag.png Graphic file (type png)
+
+<use res/a1mag.png>
+Package pdftex.def Info: res/a1mag.png used on input line 25.
+(pdftex.def)             Requested size: 158.09184pt x 158.09184pt.
+ <res/h.png, id=4, 128.48pt x 128.48pt>
+File: res/h.png Graphic file (type png)
+ <use res/h.png>
+Package pdftex.def Info: res/h.png used on input line 37.
+(pdftex.def)             Requested size: 89.93538pt x 89.93538pt.
+
+<res/v.png, id=5, 128.48pt x 128.48pt>
+File: res/v.png Graphic file (type png)
+ <use res/v.png>
+Package pdftex.def Info: res/v.png used on input line 39.
+(pdftex.def)             Requested size: 89.93538pt x 89.93538pt.
+
+<res/a2.png, id=6, 96.36pt x 96.36pt>
+File: res/a2.png Graphic file (type png)
+ <use res/a2.png>
+Package pdftex.def Info: res/a2.png used on input line 41.
+(pdftex.def)             Requested size: 67.45152pt x 67.45152pt.
+File: res/h.png Graphic file (type png)
+ <use res/h.png>
+Package pdftex.def Info: res/h.png used on input line 52.
+(pdftex.def)             Requested size: 89.93538pt x 89.93538pt.
+File: res/v.png Graphic file (type png)
+
+<use res/v.png>
+Package pdftex.def Info: res/v.png used on input line 54.
+(pdftex.def)             Requested size: 89.93538pt x 89.93538pt.
+ <res/a3.png, id=7, 96.36pt x 96.36pt>
+File: res/a3.png Graphic file (type png)
+ <use res/a3.png>
+Package pdftex.def Info: res/a3.png used on input line 56.
+(pdftex.def)             Requested size: 67.45152pt x 67.45152pt.
+ [1
+
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./r
+es/striped-lines.png (PNG copy)> <./res/a1phase.png> <./res/a1mag.png> <./res/h
+.png (PNG copy)> <./res/v.png (PNG copy)> <./res/a2.png>]
+<res/filt_5.png, id=22, 697.60625pt x 694.595pt>
+File: res/filt_5.png Graphic file (type png)
+ <use res/filt_5.png>
+Package pdftex.def Info: res/filt_5.png used on input line 93.
+(pdftex.def)             Requested size: 139.51877pt x 138.91653pt.
+
+<res/filtIm_5.png, id=23, 696.6025pt x 696.6025pt>
+File: res/filtIm_5.png Graphic file (type png)
+ <use res/filtIm_5.png>
+Package pdftex.def Info: res/filtIm_5.png used on input line 95.
+(pdftex.def)             Requested size: 139.31802pt x 139.31802pt.
+
+<res/filt_20.png, id=24, 698.61pt x 696.6025pt>
+File: res/filt_20.png Graphic file (type png)
+ <use res/filt_20.png>
+Package pdftex.def Info: res/filt_20.png used on input line 97.
+(pdftex.def)             Requested size: 139.71951pt x 139.31802pt.
+
+<res/filtIm_20.png, id=25, 691.58376pt x 694.595pt>
+File: res/filtIm_20.png Graphic file (type png)
+ <use res/filtIm_20.png>
+Package pdftex.def Info: res/filtIm_20.png used on input line 99.
+(pdftex.def)             Requested size: 138.3143pt x 138.91653pt.
+
+<res/filt_50.png, id=26, 694.595pt x 696.6025pt>
+File: res/filt_50.png Graphic file (type png)
+ <use res/filt_50.png>
+Package pdftex.def Info: res/filt_50.png used on input line 101.
+(pdftex.def)             Requested size: 138.91653pt x 139.31802pt.
+
+<res/filtIm_50.png, id=27, 696.6025pt x 698.61pt>
+File: res/filtIm_50.png Graphic file (type png)
+ <use res/filtIm_50.png>
+Package pdftex.def Info: res/filtIm_50.png used on input line 103.
+(pdftex.def)             Requested size: 139.31802pt x 139.71951pt.
+
+[3 <./res/a3.png>] [4] [5 <./res/filt_5.png> <./res/filtIm_5.png> <./res/filt_2
+0.png> <./res/filtIm_20.png> <./res/filt_50.png> <./res/filtIm_50.png>]
+(./Blatt2.aux) ) 
+Here is how much of TeX's memory you used:
+ 3876 strings out of 493633
+ 56212 string characters out of 3143377
+ 123154 words of memory out of 3000000
+ 7101 multiletter control sequences out of 15000+200000
+ 13580 words of font info for 52 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 44i,10n,45p,451b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi9.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
+fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+>
+Output written on Blatt2.pdf (5 pages, 1714330 bytes).
+PDF statistics:
+ 69 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+
