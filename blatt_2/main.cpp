@@ -26,7 +26,7 @@ Mat shift(Mat& mag){
 
 
 void a1a(){
-    cv::Mat img = cv::imread("../data/striped-lines.png",CV_LOAD_IMAGE_GRAYSCALE);
+    cv::Mat img = cv::imread("data/striped-lines.png",CV_LOAD_IMAGE_GRAYSCALE);
     Mat planes[] = {Mat_<float>(img),Mat::zeros(img.size(),CV_32F)};
     Mat complexI;
     merge(planes,2,complexI);
@@ -270,7 +270,7 @@ void a1e(){
 
 int main ( int argc, char *argv[] ) {
     //chdir("/Users/alexattinger_3/Dropbox/5_sem/ki_seminar/2/blatt2");
-    a1e();
+    a1a();
     return 0;
 }
 

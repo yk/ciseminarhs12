@@ -98,7 +98,7 @@ void main2() {
 		string s = v[i];
 		string fileName = path + s;
 		Mat img = imread(fileName, CV_LOAD_IMAGE_GRAYSCALE);
-//		hough(s, img, theta[i], rho[i], votes[i]);
+		hough(s, img, theta[i], rho[i], votes[i]);
 		houghP(s,img,theta[i],rho[i],votes[i]/3);
 	}
 }
