@@ -7,39 +7,6 @@
 using namespace std;
 using namespace cv;
 
-void canny(string& name, Mat& img) {
-	Mat edges;
-	Canny(img, edges, 100, 200);
-	imshow("Candy: " + name, edges);
-	waitKey();
-}
-
-void sobel(string& name, Mat& img) {
-	Mat edges;
-	Sobel(img, edges, img.depth(), 1, 1, 3);
-	imshow("Sobel: " + name, edges);
-	waitKey();
-}
-
-void sobelSmooth(string& name, Mat& img) {
-	Mat blurred;
-	Size ksize(0, 0);
-	GaussianBlur(img, blurred, ksize, 1.0);
-	sobel(name, blurred);
-}
-
-void main1() {
-	vector<string> v { "butterfly.jpg", "cells.jpg", "outdoor.jpg",
-			"stairs.png", "wheel.png" };
-	string path = "data/edge/";
-	for (string& s : v) {
-		string fileName = path + s;
-		Mat img = imread(fileName, CV_LOAD_IMAGE_GRAYSCALE);
-		//canny(s,img);
-		//sobel(s,img);
-		sobelSmooth(s, img);
-	}
-}
 
 void drawHough(string& name, vector<Vec2f>& lines, Mat& img) {
 	for (size_t i = 0; i < lines.size(); i++) {

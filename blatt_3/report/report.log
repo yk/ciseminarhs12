@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  16 NOV 2012 15:18
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  16 NOV 2012 22:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -190,23 +190,28 @@ Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(./report.aux)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+) (./report.aux
+
+LaTeX Warning: Label `fig:a1b' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-
-(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+ (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen122
@@ -268,88 +273,354 @@ e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
-LaTeX Info: Redefining \subref on input line 12.
+LaTeX Info: Redefining \subref on input line 14.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+LaTeX Info: Redefining \celsius on input line 14.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 14.
 
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 14.
+Package gensymb Info: Using \Omega for \ohm on input line 14.
+
+Package gensymb Warning: Not defining \micro.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 15.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
  [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<res/striped-lines.png, id=14, 702.625pt x 702.625pt>
-File: res/striped-lines.png Graphic file (type png)
+<edge/butterfly.jpg, id=14, 602.25pt x 481.8pt>
+File: edge/butterfly.jpg Graphic file (type jpg)
+ <use edge/butterfly.jpg>
+Package pdftex.def Info: edge/butterfly.jpg used on input line 71.
+(pdftex.def)             Requested size: 180.67639pt x 144.5411pt.
 
-<use res/striped-lines.png>
-Package pdftex.def Info: res/striped-lines.png used on input line 57.
-(pdftex.def)             Requested size: 210.78912pt x 210.78912pt.
+<edge/sobel_butterfly.png, id=15, 595.22375pt x 481.8pt>
+File: edge/sobel_butterfly.png Graphic file (type png)
 
-<res/a1phase.png, id=15, 526.96875pt x 526.96875pt>
-File: res/a1phase.png Graphic file (type png)
- <use res/a1phase.png>
-Package pdftex.def Info: res/a1phase.png used on input line 59.
-(pdftex.def)             Requested size: 158.09184pt x 158.09184pt.
+<use edge/sobel_butterfly.png>
+Package pdftex.def Info: edge/sobel_butterfly.png used on input line 73.
+(pdftex.def)             Requested size: 178.5685pt x 144.5411pt.
 
-<res/a1mag.png, id=16, 526.96875pt x 526.96875pt>
-File: res/a1mag.png Graphic file (type png)
- <use res/a1mag.png>
-Package pdftex.def Info: res/a1mag.png used on input line 61.
-(pdftex.def)             Requested size: 158.09184pt x 158.09184pt.
+<edge/canny_butterfly.png, id=16, 597.23125pt x 478.78876pt>
+File: edge/canny_butterfly.png Graphic file (type png)
 
-<res/h.png, id=17, 128.48pt x 128.48pt>
-File: res/h.png Graphic file (type png)
- <use res/h.png>
-Package pdftex.def Info: res/h.png used on input line 73.
-(pdftex.def)             Requested size: 89.93538pt x 89.93538pt.
+<use edge/canny_butterfly.png>
+Package pdftex.def Info: edge/canny_butterfly.png used on input line 75.
+(pdftex.def)             Requested size: 179.17075pt x 143.63773pt.
+ <edge/stairs.png, id=17, 361.35pt x 481.8pt>
+File: edge/stairs.png Graphic file (type png)
 
-<res/v.png, id=18, 128.48pt x 128.48pt>
-File: res/v.png Graphic file (type png)
- <use res/v.png>
-Package pdftex.def Info: res/v.png used on input line 75.
-(pdftex.def)             Requested size: 89.93538pt x 89.93538pt.
+<use edge/stairs.png>
+Package pdftex.def Info: edge/stairs.png used on input line 84.
+(pdftex.def)             Requested size: 144.53743pt x 192.71658pt.
+ <edge/sobel_stairs.png, id=18, 355.3275pt x 477.785pt>
+File: edge/sobel_stairs.png Graphic file (type png)
 
-<res/a2.png, id=19, 96.36pt x 96.36pt>
-File: res/a2.png Graphic file (type png)
- <use res/a2.png>
-Package pdftex.def Info: res/a2.png used on input line 77.
-(pdftex.def)             Requested size: 67.45152pt x 67.45152pt.
- [2] [3 <./res/striped-lines.png (PNG copy)> <./res/a1phase.png> <./res/a1mag.p
-ng> <./res/h.png (PNG copy)> <./res/v.png (PNG copy)> <./res/a2.png>] [4] (./re
-port.aux) ) 
+<use edge/sobel_stairs.png>
+Package pdftex.def Info: edge/sobel_stairs.png used on input line 86.
+(pdftex.def)             Requested size: 142.12846pt x 191.11061pt.
+
+<edge/canny_stairs.png, id=19, 360.34625pt x 481.8pt>
+File: edge/canny_stairs.png Graphic file (type png)
+
+<use edge/canny_stairs.png>
+Package pdftex.def Info: edge/canny_stairs.png used on input line 88.
+(pdftex.def)             Requested size: 144.13594pt x 192.71658pt.
+ <edge/wheel.png, id=20, 15.4176pt x 15.4176pt>
+File: edge/wheel.png Graphic file (type png)
+
+<use edge/wheel.png>
+Package pdftex.def Info: edge/wheel.png used on input line 97.
+(pdftex.def)             Requested size: 15.41754pt x 15.41754pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[]\OT1/cmr/m/n/9 (a)
+ []
+
+
+Overfull \hbox (5.67259pt too wide) in paragraph at lines 97--97
+|\OT1/cmr/m/n/9 Orig-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/cmr/m/n/9 i-nal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+\OT1/cmr/m/n/9 Im-
+ []
+
+<edge/sobel_wheel.png, id=21, 254.9525pt x 254.9525pt>
+File: edge/sobel_wheel.png Graphic file (type png)
+
+<use edge/sobel_wheel.png>
+Package pdftex.def Info: edge/sobel_wheel.png used on input line 99.
+(pdftex.def)             Requested size: 101.97919pt x 101.97919pt.
+
+<edge/canny_wheel.png, id=22, 252.945pt x 257.96375pt>
+File: edge/canny_wheel.png Graphic file (type png)
+
+<use edge/canny_wheel.png>
+Package pdftex.def Info: edge/canny_wheel.png used on input line 101.
+(pdftex.def)             Requested size: 101.17621pt x 103.18365pt.
+
+<edge/outdoor.jpg, id=23, 331.59177pt x 310.33588pt>
+File: edge/outdoor.jpg Graphic file (type jpg)
+ <use edge/outdoor.jpg>
+Package pdftex.def Info: edge/outdoor.jpg used on input line 110.
+(pdftex.def)             Requested size: 132.63435pt x 124.13214pt.
+
+<edge/sobel_outdoor.png, id=24, 309.155pt x 290.08376pt>
+File: edge/sobel_outdoor.png Graphic file (type png)
+
+<use edge/sobel_outdoor.png>
+Package pdftex.def Info: edge/sobel_outdoor.png used on input line 112.
+(pdftex.def)             Requested size: 123.6598pt x 116.03143pt.
+
+<edge/canny_outdoor.png, id=25, 313.17pt x 291.0875pt>
+File: edge/canny_outdoor.png Graphic file (type png)
+
+<use edge/canny_outdoor.png>
+Package pdftex.def Info: edge/canny_outdoor.png used on input line 114.
+(pdftex.def)             Requested size: 125.26576pt x 116.43292pt.
+
+<edge/cells.jpg, id=26, 366.36874pt x 368.37625pt>
+File: edge/cells.jpg Graphic file (type jpg)
+ <use edge/cells.jpg>
+Package pdftex.def Info: edge/cells.jpg used on input line 123.
+(pdftex.def)             Requested size: 146.54489pt x 147.34789pt.
+
+<edge/sobel_cells.png, id=27, 364.36125pt x 367.3725pt>
+File: edge/sobel_cells.png Graphic file (type png)
+
+<use edge/sobel_cells.png>
+Package pdftex.def Info: edge/sobel_cells.png used on input line 125.
+(pdftex.def)             Requested size: 145.74191pt x 146.94638pt.
+
+<edge/canny_cells.png, id=28, 367.3725pt x 367.3725pt>
+File: edge/canny_cells.png Graphic file (type png)
+
+<use edge/canny_cells.png>
+Package pdftex.def Info: edge/canny_cells.png used on input line 127.
+(pdftex.def)             Requested size: 146.94638pt x 146.94638pt.
+ [2] [3 <./edge/butterfly.jpg> <./edge/sobel_butterfly.png> <./edge/canny_butte
+rfly.png>] [4 <./edge/stairs.png (PNG copy)> <./edge/sobel_stairs.png> <./edge/
+canny_stairs.png>] [5 <./edge/wheel.png (PNG copy)> <./edge/sobel_wheel.png> <.
+/edge/canny_wheel.png> <./edge/outdoor.jpg> <./edge/sobel_outdoor.png> <./edge/
+canny_outdoor.png>] [6 <./edge/cells.jpg> <./edge/sobel_cells.png> <./edge/cann
+y_cells.png>] [7]
+<hough/res/corridorr0_5.jpg, id=49, 291.0875pt x 200.75pt>
+File: hough/res/corridorr0_5.jpg Graphic file (type jpg)
+
+<use hough/res/corridorr0_5.jpg>
+Package pdftex.def Info: hough/res/corridorr0_5.jpg used on input line 152.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+
+<hough/res/corridor.jpg, id=50, 291.0875pt x 200.75pt>
+File: hough/res/corridor.jpg Graphic file (type jpg)
+
+<use hough/res/corridor.jpg>
+Package pdftex.def Info: hough/res/corridor.jpg used on input line 154.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+
+<hough/res/corridorr2.jpg, id=51, 291.0875pt x 200.75pt>
+File: hough/res/corridorr2.jpg Graphic file (type jpg)
+
+<use hough/res/corridorr2.jpg>
+Package pdftex.def Info: hough/res/corridorr2.jpg used on input line 156.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+
+<hough/res/corridort0_5.jpg, id=52, 291.0875pt x 200.75pt>
+File: hough/res/corridort0_5.jpg Graphic file (type jpg)
+
+<use hough/res/corridort0_5.jpg>
+Package pdftex.def Info: hough/res/corridort0_5.jpg used on input line 164.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+File: hough/res/corridor.jpg Graphic file (type jpg)
+ <use hough/res/corridor.jpg>
+Package pdftex.def Info: hough/res/corridor.jpg used on input line 166.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+
+<hough/res/corridort2.jpg, id=53, 291.0875pt x 200.75pt>
+File: hough/res/corridort2.jpg Graphic file (type jpg)
+
+<use hough/res/corridort2.jpg>
+Package pdftex.def Info: hough/res/corridort2.jpg used on input line 168.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+
+<hough/res/corridorn80.jpg, id=54, 291.0875pt x 200.75pt>
+File: hough/res/corridorn80.jpg Graphic file (type jpg)
+
+<use hough/res/corridorn80.jpg>
+Package pdftex.def Info: hough/res/corridorn80.jpg used on input line 176.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+File: hough/res/corridor.jpg Graphic file (type jpg)
+ <use hough/res/corridor.jpg>
+Package pdftex.def Info: hough/res/corridor.jpg used on input line 178.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+
+<hough/res/corridorn120.jpg, id=55, 291.0875pt x 200.75pt>
+File: hough/res/corridorn120.jpg Graphic file (type jpg)
+
+<use hough/res/corridorn120.jpg>
+Package pdftex.def Info: hough/res/corridorn120.jpg used on input line 180.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+File: hough/res/corridor.jpg Graphic file (type jpg)
+ <use hough/res/corridor.jpg>
+Package pdftex.def Info: hough/res/corridor.jpg used on input line 191.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--191
+[]\OT1/cmr/m/n/9 (a)
+ []
+
+
+Overfull \hbox (8.24396pt too wide) in paragraph at lines 191--191
+|\OT1/cmr/m/n/9 theta=1,rho=1$[]$,N=100| 
+ []
+
+<hough/res/outdoor.jpg, id=56, 642.4pt x 425.59pt>
+File: hough/res/outdoor.jpg Graphic file (type jpg)
+ <use hough/res/outdoor.jpg>
+Package pdftex.def Info: hough/res/outdoor.jpg used on input line 193.
+(pdftex.def)             Requested size: 192.72148pt x 127.67798pt.
+
+<hough/res/room_1.jpg, id=57, 387.4475pt x 311.1625pt>
+File: hough/res/room_1.jpg Graphic file (type jpg)
+
+<use hough/res/room_1.jpg>
+Package pdftex.def Info: hough/res/room_1.jpg used on input line 195.
+(pdftex.def)             Requested size: 116.23514pt x 93.34947pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+[]\OT1/cmr/m/n/9 (c)
+ []
+
+<hough/res/room_2.jpg, id=58, 387.4475pt x 311.1625pt>
+File: hough/res/room_2.jpg Graphic file (type jpg)
+
+<use hough/res/room_2.jpg>
+Package pdftex.def Info: hough/res/room_2.jpg used on input line 197.
+(pdftex.def)             Requested size: 116.23514pt x 93.34947pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--197
+[]\OT1/cmr/m/n/9 (d)
+ []
+
+<hough/res/stairs.png, id=59, 361.35pt x 481.8pt>
+File: hough/res/stairs.png Graphic file (type png)
+ <use hough/res/stairs.png>
+Package pdftex.def Info: hough/res/stairs.png used on input line 199.
+(pdftex.def)             Requested size: 108.40584pt x 144.5411pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
+[]\OT1/cmr/m/n/9 (e)
+ []
+
+[8 <./hough/res/corridorr0_5.jpg> <./hough/res/corridor.jpg> <./hough/res/corri
+dorr2.jpg>] <hough/res/Pcorridor.jpg, id=64, 291.0875pt x 200.75pt>
+File: hough/res/Pcorridor.jpg Graphic file (type jpg)
+
+<use hough/res/Pcorridor.jpg>
+Package pdftex.def Info: hough/res/Pcorridor.jpg used on input line 216.
+(pdftex.def)             Requested size: 87.32692pt x 60.22545pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--216
+[]\OT1/cmr/m/n/9 (a)
+ []
+
+
+Overfull \hbox (3.61899pt too wide) in paragraph at lines 216--216
+|\OT1/cmr/m/n/9 theta=1,rho=1$[]$,N=33| 
+ []
+
+<hough/res/Poutdoor.jpg, id=65, 642.4pt x 425.59pt>
+File: hough/res/Poutdoor.jpg Graphic file (type jpg)
+
+<use hough/res/Poutdoor.jpg>
+Package pdftex.def Info: hough/res/Poutdoor.jpg used on input line 218.
+(pdftex.def)             Requested size: 192.72148pt x 127.67798pt.
+
+<hough/res/Proom_1.jpg, id=66, 387.4475pt x 311.1625pt>
+File: hough/res/Proom_1.jpg Graphic file (type jpg)
+
+<use hough/res/Proom_1.jpg>
+Package pdftex.def Info: hough/res/Proom_1.jpg used on input line 220.
+(pdftex.def)             Requested size: 116.23514pt x 93.34947pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--220
+[]\OT1/cmr/m/n/9 (c)
+ []
+
+<hough/res/Proom_2.jpg, id=67, 387.4475pt x 311.1625pt>
+File: hough/res/Proom_2.jpg Graphic file (type jpg)
+
+<use hough/res/Proom_2.jpg>
+Package pdftex.def Info: hough/res/Proom_2.jpg used on input line 222.
+(pdftex.def)             Requested size: 116.23514pt x 93.34947pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 222--222
+[]\OT1/cmr/m/n/9 (d)
+ []
+
+<hough/res/Pstairs.png, id=68, 361.35pt x 481.8pt>
+File: hough/res/Pstairs.png Graphic file (type png)
+ <use hough/res/Pstairs.png>
+Package pdftex.def Info: hough/res/Pstairs.png used on input line 224.
+(pdftex.def)             Requested size: 108.40584pt x 144.5411pt.
+
+[9 <./hough/res/corridort0_5.jpg> <./hough/res/corridort2.jpg> <./hough/res/cor
+ridorn80.jpg> <./hough/res/corridorn120.jpg>] [10 <./hough/res/outdoor.jpg> <./
+hough/res/room_1.jpg> <./hough/res/room_2.jpg> <./hough/res/stairs.png (PNG cop
+y)>] [11 <./hough/res/Pcorridor.jpg> <./hough/res/Poutdoor.jpg> <./hough/res/Pr
+oom_1.jpg> <./hough/res/Proom_2.jpg> <./hough/res/Pstairs.png (PNG copy)>]
+(./report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3839 strings out of 493633
- 55700 string characters out of 3143377
- 121130 words of memory out of 3000000
- 7074 multiletter control sequences out of 15000+200000
- 11343 words of font info for 43 fonts, out of 3000000 for 9000
+ 4028 strings out of 493633
+ 59639 string characters out of 3143377
+ 126459 words of memory out of 3000000
+ 7229 multiletter control sequences out of 15000+200000
+ 13234 words of font info for 51 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 44i,12n,45p,239b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
-pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
-b></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on report.pdf (4 pages, 1113092 bytes).
+ 44i,12n,45p,1302b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
+al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on report.pdf (11 pages, 1245119 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

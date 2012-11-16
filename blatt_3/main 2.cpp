@@ -16,7 +16,7 @@ Mat src,dst,detected,orig;
 int edgeThresh = 1;
 int lowThresh;
 int const max_lowThresh = 100;
-int ratio=3;
+int ratio=2;
 int kernel_size = 3;
 int gaussKernel = 1;
 int sobelThres = 20;
@@ -29,22 +29,22 @@ string kernelwin = "Gaussian Kernel size";
 Mat sob_x,sob_y,sobel;
 
 void cannySlider(int,void*){
-  
-   
+    
+    
     Canny(src,detected,lowThresh,lowThresh*ratio,kernel_size);
     dst = Scalar::all(0);
     
     src.copyTo(dst,detected);
     imshow(winname,dst);
     moveWindow(winname, src.cols+10, 0);
-
+    
     
 }
 
 void cannyEdgeDetection(){
     
     dst.create(src.size(),src.type());
-       
+    
     cannySlider(0,0);
     
     
@@ -76,7 +76,7 @@ void processImage(int,void*){
     cannyEdgeDetection();
     
     sobelEdgeDetection();
-
+    
 }
 void setupTrackbars(){
     namedWindow(threswin);
@@ -84,14 +84,14 @@ void setupTrackbars(){
     createTrackbar( "Canny lower", threswin, &lowThresh, max_lowThresh, processImage);
     createTrackbar("Gaussian Blur Kernel",threswin,&gaussKernel,15,processImage);
     createTrackbar("Sobel Threshold",threswin,&sobelThres,200,processImage);
-
+    
     
 }
 
 int main(int argc, const char * argv[])
 {
     string dirname = argv[1];
-        
+    
     string files[] = {"butterfly.jpg","cells.jpg","outdoor.jpg","stairs.png","wheel.png"};
     setupTrackbars();
     for (int i =  0;i<5;i++){
@@ -99,9 +99,9 @@ int main(int argc, const char * argv[])
         processImage(0, 0);
         
         
-                waitKey(0);
+        waitKey(0);
     }
-   
+    
     
     return 0;
 }
