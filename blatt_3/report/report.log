@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  16 NOV 2012 14:27
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  16 NOV 2012 15:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Blatt2.tex
-(./Blatt2.tex
+**report.tex
+(./report.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
 rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
@@ -190,8 +190,8 @@ Package: caption3 2010/01/14 v3.1m caption3 kernel (AR)
 (/usr/local/texlive/2011/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(./Blatt2.aux)
-\openout1 = `Blatt2.aux'.
+(./report.aux)
+\openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
@@ -280,65 +280,76 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 13.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-<res/striped-lines.png, id=1, 702.625pt x 702.625pt>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+ [1
+
+{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<res/striped-lines.png, id=14, 702.625pt x 702.625pt>
 File: res/striped-lines.png Graphic file (type png)
 
 <use res/striped-lines.png>
-Package pdftex.def Info: res/striped-lines.png used on input line 21.
+Package pdftex.def Info: res/striped-lines.png used on input line 57.
 (pdftex.def)             Requested size: 210.78912pt x 210.78912pt.
- <res/a1phase.png, id=2, 526.96875pt x 526.96875pt>
+
+<res/a1phase.png, id=15, 526.96875pt x 526.96875pt>
 File: res/a1phase.png Graphic file (type png)
-
-<use res/a1phase.png>
-Package pdftex.def Info: res/a1phase.png used on input line 23.
+ <use res/a1phase.png>
+Package pdftex.def Info: res/a1phase.png used on input line 59.
 (pdftex.def)             Requested size: 158.09184pt x 158.09184pt.
- <res/a1mag.png, id=3, 526.96875pt x 526.96875pt>
+
+<res/a1mag.png, id=16, 526.96875pt x 526.96875pt>
 File: res/a1mag.png Graphic file (type png)
-
-<use res/a1mag.png>
-Package pdftex.def Info: res/a1mag.png used on input line 25.
+ <use res/a1mag.png>
+Package pdftex.def Info: res/a1mag.png used on input line 61.
 (pdftex.def)             Requested size: 158.09184pt x 158.09184pt.
- <res/h.png, id=4, 128.48pt x 128.48pt>
+
+<res/h.png, id=17, 128.48pt x 128.48pt>
 File: res/h.png Graphic file (type png)
  <use res/h.png>
-Package pdftex.def Info: res/h.png used on input line 37.
+Package pdftex.def Info: res/h.png used on input line 73.
 (pdftex.def)             Requested size: 89.93538pt x 89.93538pt.
 
-<res/v.png, id=5, 128.48pt x 128.48pt>
+<res/v.png, id=18, 128.48pt x 128.48pt>
 File: res/v.png Graphic file (type png)
  <use res/v.png>
-Package pdftex.def Info: res/v.png used on input line 39.
+Package pdftex.def Info: res/v.png used on input line 75.
 (pdftex.def)             Requested size: 89.93538pt x 89.93538pt.
 
-<res/a2.png, id=6, 96.36pt x 96.36pt>
+<res/a2.png, id=19, 96.36pt x 96.36pt>
 File: res/a2.png Graphic file (type png)
  <use res/a2.png>
-Package pdftex.def Info: res/a2.png used on input line 41.
+Package pdftex.def Info: res/a2.png used on input line 77.
 (pdftex.def)             Requested size: 67.45152pt x 67.45152pt.
- [1
-
-{/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2 <./r
-es/striped-lines.png (PNG copy)> <./res/a1phase.png> <./res/a1mag.png> <./res/h
-.png (PNG copy)> <./res/v.png (PNG copy)> <./res/a2.png>] [3] (./Blatt2.aux) ) 
+ [2] [3 <./res/striped-lines.png (PNG copy)> <./res/a1phase.png> <./res/a1mag.p
+ng> <./res/h.png (PNG copy)> <./res/v.png (PNG copy)> <./res/a2.png>] [4] (./re
+port.aux) ) 
 Here is how much of TeX's memory you used:
- 3822 strings out of 493633
- 55395 string characters out of 3143377
- 119130 words of memory out of 3000000
- 7060 multiletter control sequences out of 15000+200000
+ 3839 strings out of 493633
+ 55700 string characters out of 3143377
+ 121130 words of memory out of 3000000
+ 7074 multiletter control sequences out of 15000+200000
  11343 words of font info for 43 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 44i,9n,45p,239b,356s stack positions out of 5000i,500n,10000p,200000b,50000s
-<
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
-al/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on Blatt2.pdf (3 pages, 1083709 bytes).
+ 44i,12n,45p,239b,358s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on report.pdf (4 pages, 1113092 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 59 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
