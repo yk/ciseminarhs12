@@ -19,15 +19,15 @@ int edgeandsurf() {
 		Mat frame;
 		cap >> frame; // get a new frame from camera
 		cvtColor(frame, edges, CV_BGR2GRAY);
-		GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);
-		Canny(edges, edges, 0, 30, 3);
-//		SurfFeatureDetector detector(500);
-//		vector<KeyPoint> keypoints;
-//		detector.detect(edges,keypoints);
-//		SurfDescriptorExtractor extractor;
-//		Mat descriptors;
-//		extractor.compute(edges,keypoints,descriptors);
-//		drawKeypoints(edges,keypoints,edges);
+//		GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);
+//		Canny(edges, edges, 0, 30, 3);
+		SurfFeatureDetector detector(500);
+		vector<KeyPoint> keypoints;
+		detector.detect(edges,keypoints);
+		SurfDescriptorExtractor extractor;
+		Mat descriptors;
+		extractor.compute(edges,keypoints,descriptors);
+		drawKeypoints(edges,keypoints,edges);
 		imshow("edges", edges);
 		if (waitKey(30) >= 0)
 			break;
@@ -80,8 +80,10 @@ int matchimages() {
 }
 
 int matchvideotoimage() {
-	Mat img_1 = imread("data/vetter.jpg", CV_LOAD_IMAGE_GRAYSCALE);
+	Mat img_1 = imread("data/me1.jpg", CV_LOAD_IMAGE_GRAYSCALE);
 	int minHessian = 400;
+//	GaussianBlur(img_1, img_1, Size(7, 7), 1.5, 1.5);
+//	Canny(img_1, img_1, 0, 30, 3);
 
 	SurfFeatureDetector detector(minHessian);
 
@@ -134,7 +136,7 @@ int matchvideotoimage() {
 		  std::vector< DMatch > good_matches;
 
 		  for( int i = 0; i < descriptors_1.rows; i++ )
-		  { if( matches[i].distance < 2*min_dist )
+		  { if( matches[i].distance < 1.4*min_dist )
 		    { good_matches.push_back( matches[i]); }
 		  }
 
