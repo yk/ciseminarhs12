@@ -6,6 +6,12 @@
 using namespace std;
 using namespace cv;
 
+void showandsave(string name, Mat img){
+	imwrite("data/res/"+name + ".png",img);
+	imshow(name,img);
+	waitKey();
+}
+
 void a1(){
 	Mat element = getStructuringElement(MORPH_RECT,Size(3,3));
 	Mat img = imread("data/africa.png",CV_LOAD_IMAGE_GRAYSCALE);
@@ -13,14 +19,12 @@ void a1(){
 	waitKey();
 	Mat eroded;
 	erode(img,eroded,element);
-	imshow("eroded",eroded);
-	waitKey();
+	showandsave("eroded",eroded);
 	Mat dilated;
 	dilate(img,dilated,element);
 	dilate(dilated,dilated,element);
 	dilate(dilated,dilated,element);
-	imshow("dilated",dilated);
-	waitKey();
+	showandsave("dilated",dilated);
 	Mat outline;
 	dilate(img,outline,element);
 	dilate(outline,outline,element);
@@ -30,52 +34,59 @@ void a1(){
 	erode(outline,outline,element);
 	Mat outline_er;
 	erode(outline,outline_er,element);
-	imshow("border",outline-outline_er);
-	waitKey();
+	showandsave("border",outline-outline_er);
 }
 
 void b1(){
 	Mat dotsandlines = imread("data/dotsandlines.png",CV_LOAD_IMAGE_GRAYSCALE);
-	imshow("original",dotsandlines);
-	waitKey();
+	showandsave("original",dotsandlines);
 	Mat disk = getStructuringElement(MORPH_ELLIPSE,Size(9,9));
 	Mat dots;
 	morphologyEx(dotsandlines,dots,MORPH_OPEN,disk);
-	imshow("dots",dots);
-	waitKey();
+	showandsave("dots",dots);
 	Mat cells = imread("data/cells.png",CV_LOAD_IMAGE_GRAYSCALE);
-	imshow("cells",cells);
-	waitKey();
+	showandsave("cells",cells);
 	threshold(cells,cells,210,255,THRESH_BINARY_INV);
-	imshow("cells_thresh",cells);
-	waitKey();
+	showandsave("cells_thresh",cells);
 	Mat dots1;
+	disk = getStructuringElement(MORPH_ELLIPSE,Size(7,7));
 	morphologyEx(cells,dots1,MORPH_OPEN,disk);
-	imshow("dots1",dots1);
-	waitKey();
+	showandsave("dots1",dots1);
 	Mat circles = imread("data/circles.png",CV_LOAD_IMAGE_GRAYSCALE);
-	imshow("circles",circles);
-	waitKey();
+	showandsave("circles",circles);
 	Mat circles_closed;
+	disk = getStructuringElement(MORPH_ELLIPSE,Size(9,9));
 	morphologyEx(circles,circles_closed,MORPH_CLOSE,disk);
-	imshow("circles_closed",circles_closed);
-	waitKey();
+	showandsave("circles_closed9",circles_closed);
+	disk = getStructuringElement(MORPH_ELLIPSE,Size(17,17));
+	morphologyEx(circles,circles_closed,MORPH_CLOSE,disk);
+	showandsave("circles_closed17",circles_closed);
+	disk = getStructuringElement(MORPH_ELLIPSE,Size(33,33));
+	morphologyEx(circles,circles_closed,MORPH_CLOSE,disk);
+	showandsave("circles_closed33",circles_closed);
 
 }
 
 void c1(){
 	Mat house = imread("data/house.png",CV_LOAD_IMAGE_GRAYSCALE);
-	imshow("house",house);
-	waitKey();
-	Mat rect = getStructuringElement(MORPH_RECT,Size(3,3));
+	showandsave("house",house);
+	Mat rect = getStructuringElement(MORPH_CROSS,Size(3,3));
 	Mat grad;
 	morphologyEx(house,grad,MORPH_GRADIENT,rect);
-	imshow("grad",grad);
-	waitKey();
+	threshold(grad,grad,60,255,CV_THRESH_BINARY);
+	showandsave("grad",grad);
 	Mat canny;
-	Canny(house,canny,100,50);
-	imshow("canny",canny);
-	waitKey();
+	Canny(house,canny,210,150);
+	showandsave("canny",canny);
+	morphologyEx(house,grad,MORPH_GRADIENT,rect);
+	Mat rh = getStructuringElement(MORPH_RECT,Size(1,3));
+	Mat rv = getStructuringElement(MORPH_RECT,Size(3,1));
+	Mat gh,gv;
+	morphologyEx(house,gh,MORPH_GRADIENT,rh);
+	morphologyEx(house,gv,MORPH_GRADIENT,rv);
+	Mat corners = abs(gh) + abs(gv);
+	threshold(corners,corners,190,510,CV_THRESH_BINARY);
+	showandsave("corners",corners);
 }
 
 
@@ -83,7 +94,7 @@ void c1(){
 
 
 int main(){
-//	a1();
-//	b1();
+	a1();
+	b1();
 	c1();
 }
