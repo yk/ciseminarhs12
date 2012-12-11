@@ -8,8 +8,11 @@
 \usepackage{placeins}
 \usepackage{gensymb}
 
+\author{Alexander Attinger, Yannic Kilcher}
+\title{Report Blatt 4}
 
 \begin{document}
+\maketitle
 
 \section{Grab Cut}
 Grab cut is a very elegant algorithm for image segmentation. We were asked to use it on a series of images. Luckily, OpenCV provides us with a very neat implementation of the grab cut algorithm.
@@ -133,8 +136,10 @@ Grab cut is a very elegant algorithm for image segmentation. We were asked to us
 \end{figure}
 Some observations about the performance of the grab cut
 \begin{itemize}
-\item backgroun
-\item hello
+\item Manual selection of rectangular bound necessary, i.e. complete automation probably very tricky
+\item Works well with objects clearly sticking out from the background
+\item Results can be improved by manually marking additional foreground and background pixels
+\item Objects outside of the inital rectangular bounding box are automatically assigned as background, i.e. it cannot be used to segment out similar objects in a region of the picture outside the  bounding box (i.e. the flower).
 \end{itemize}
 
 
@@ -145,11 +150,11 @@ We have made the text on the Africa map bolder by eroding with a 3 by 3 rectangl
 \centering
 \subfloat[][The original image]{\includegraphics[scale=.3]{data/africa.png}}
 \quad
-\subfloat[][Eroded]{\includegraphics[scale=.3]{data/res/eroded.png}}
+\subfloat[][Eroded]{\includegraphics[scale=.2]{data/res/eroded.png}}
 \quad
-\subfloat[][Dilated]{\includegraphics[scale=.3]{data/res/dilated.png}}
+\subfloat[][Dilated]{\includegraphics[scale=.2]{data/res/dilated.png}}
 \quad
-\subfloat[][Outlines through erosion and subtraction]{\includegraphics[scale=.3]{data/res/border.png}}
+\subfloat[][Outlines through erosion and subtraction]{\includegraphics[scale=.2]{data/res/border.png}}
 \quad
 \caption{Erosion and dilation on a binary image}%
 \label{fig:a2a}%
