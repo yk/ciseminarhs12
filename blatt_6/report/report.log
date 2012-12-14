@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  11 DEC 2012 19:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  14 DEC 2012 10:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -317,32 +317,55 @@ File: img/epi2.png Graphic file (type png)
  <use img/epi2.png>
 Package pdftex.def Info: img/epi2.png used on input line 64.
 (pdftex.def)             Requested size: 151.76816pt x 255.35596pt.
- [2 <./img/matches.png>] [3 <./img/epi1.png> <./img/epi2.png>] [4] (./report.au
-x) ) 
+ [2 <./img/matches.png>] [3 <./img/epi1.png> <./img/epi2.png>]
+<img/matches2.png, id=27, 1004.75375pt x 851.18pt>
+File: img/matches2.png Graphic file (type png)
+ <use img/matches2.png>
+Package pdftex.def Info: img/matches2.png used on input line 102.
+(pdftex.def)             Requested size: 401.89438pt x 340.46596pt.
+
+Overfull \hbox (41.89438pt too wide) in paragraph at lines 102--103
+[][] 
+ []
+
+<img/epi2_1.png, id=28, 497.86pt x 850.17625pt>
+File: img/epi2_1.png Graphic file (type png)
+ <use img/epi2_1.png>
+Package pdftex.def Info: img/epi2_1.png used on input line 109.
+(pdftex.def)             Requested size: 149.35915pt x 255.05484pt.
+
+<img/epi2_2.png, id=29, 502.87875pt x 848.16875pt>
+File: img/epi2_2.png Graphic file (type png)
+ <use img/epi2_2.png>
+Package pdftex.def Info: img/epi2_2.png used on input line 111.
+(pdftex.def)             Requested size: 150.86478pt x 254.45258pt.
+
+[4] [5 <./img/matches2.png>] [6 <./img/epi2_1.png> <./img/epi2_2.png>]
+(./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3856 strings out of 493633
- 55804 string characters out of 3143377
- 122393 words of memory out of 3000000
- 7092 multiletter control sequences out of 15000+200000
+ 3874 strings out of 493633
+ 56089 string characters out of 3143377
+ 123417 words of memory out of 3000000
+ 7107 multiletter control sequences out of 15000+200000
  11344 words of font info for 43 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 44i,12n,45p,585b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.p
-fb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/lo
-cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
-/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/te
-xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on report.pdf (4 pages, 1672797 bytes).
+ 44i,12n,45p,870b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi8.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r10.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.
+pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
+usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on report.pdf (6 pages, 3386923 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 77 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
