@@ -19,7 +19,7 @@ using namespace std;
 
 std::vector<Point2f> matchedPoints_1,matchedPoints_2;
 std::vector<KeyPoint> matchedKeyPoints_1,matchedKeyPoints_2;
-Mat view1,view2;
+Mat view1,view2,outliers;
 
 
 void showandsave(string name, Mat img) {
@@ -56,14 +56,19 @@ void checkFundamentalMatrix(Point2f &x,Point2f &xprime,Mat &f){
 
 Mat calculateFundamental(){
     Mat fundamental8,fundamentalRan;
-    Mat out;
+    
     fundamental8=findFundamentalMat(matchedPoints_1, matchedPoints_2,CV_FM_8POINT);
     cout<<"Fundamental by 8 point"<<endl<<fundamental8<<endl;
+    for (int i = 0; i<matchedPoints_1.size(); i++) {
+        //should all be very close to 0!
+        //checkFundamentalMatrix(matchedPoints_1[i], matchedPoints_2[i], fundamental8);
+        
+    }
     
-    fundamentalRan = findFundamentalMat(matchedPoints_1, matchedPoints_2,CV_FM_RANSAC,1.,.99,out);
+    fundamentalRan = findFundamentalMat(matchedPoints_1, matchedPoints_2,CV_FM_RANSAC,1.,.99,outliers);
  
     cout<<"Fundamental by Ransac"<<endl<<fundamentalRan<<endl;
-    cout<<out;
+   
     for (int i = 0; i<matchedPoints_1.size(); i++) {
         //should all be very close to 0!
         checkFundamentalMatrix(matchedPoints_1[i], matchedPoints_2[i], fundamentalRan);
@@ -73,36 +78,6 @@ Mat calculateFundamental(){
 }
 
 
-vector<KeyPoint> getHarrisPoints(Mat& img,int thresh=95) {
-	Mat dst, dst_norm, dst_norm_scaled;
-	dst = Mat::zeros(img.size(), CV_32FC1);
-    //	int thresh = 95;
-    
-	/// Detector parameters
-	int blockSize = 2;
-	int apertureSize = 3;
-	double k = 0.04;
-    
-	/// Detecting corners
-	cornerHarris(img, dst, blockSize, apertureSize, k, BORDER_DEFAULT);
-    
-	/// Normalizing
-	normalize(dst, dst_norm, 0, 255, NORM_MINMAX, CV_32FC1, Mat());
-	convertScaleAbs(dst_norm, dst_norm_scaled);
-    cout<<dst_norm.rows<<endl;
-	
-    vector<KeyPoint> v;
-	/// Drawing a circle around corners
-	for (int j = 0; j < dst_norm.rows; j++) {
-		for (int i = 0; i < dst_norm.cols; i++) {
-			if ((int) dst_norm.at<float>(j, i) > thresh) {
-				v.push_back(KeyPoint(i,j,1));
-			}
-		}
-	}
-	cout << "got " << v.size() << " harris points" << endl;
-	return v;
-}
 
 void match() {
 	view1 = imread("/Users/alexattinger_3/Dropbox/5_sem/ki_seminar/6/johnHunter/001.png", CV_LOAD_IMAGE_GRAYSCALE);
@@ -112,7 +87,7 @@ void match() {
     //	SiftFeatureDetector detector(0.14,0.14);
     
 	std::vector<KeyPoint> keypoints_1, keypoints_2;
-    SurfFeatureDetector detector(2500);
+    SurfFeatureDetector detector(900);
     //	SiftFeatureDetector detector(0.14,0.14);
     
 	    
@@ -136,7 +111,7 @@ void match() {
 	std::vector<DMatch> matches;
 	matcher.match(descriptors_1, descriptors_2, matches);
     
-	float thresh = 0.15;
+	float thresh = 0.24;
     
 	auto newend =
     remove_if(matches.begin(), matches.end(),
@@ -191,8 +166,10 @@ Mat getLineVector(Mat f, Point2f x){
 double calculateDistance(const Mat &line,const Point2f &x){
     Mat point = getHomogeneousMat(x);
     Mat prod = point.t()*line.t();
-       return prod.at<double>(0,0);
+    
+       return abs(prod.at<double>(0,0));
 }
+
 
 
 
@@ -201,6 +178,13 @@ int main(int argc, const char * argv[])
     //EX 1
     match();
     Mat f = calculateFundamental();
+    
+    Mat u,s,vt;
+    SVD::compute(f, s, u, vt);
+    cout<<"S:"<<endl<<s<<endl;
+    cout<<"U:"<<endl<<u<<endl;
+    cout<<"V:"<<endl<<vt.t()<<endl;
+    
     
     
     //EX 2
@@ -218,18 +202,33 @@ int main(int argc, const char * argv[])
     drawEpilines(view2, lines1);
     drawKeypoints(view2, matchedKeyPoints_2, view2);
     imshow("epilines in view 2",view2);
+    double d1 = 0;
+    double d2 = 0;
+    
+    double d1_in = 0;
+    double d2_in = 0;
+    int countInliers = 0;
   
     for(int i = 0;i<matchedPoints_1.size();i++){
-        Mat line = Mat::ones(1,3,CV_64FC1);
+        Mat lineInViewOne = Mat::ones(1,3,CV_64FC1);
+        Mat lineInViewTwo = lineInViewOne.clone();
         for(int j = 0;j<3;j++){
-             line.at<double>(0,j)=lines2.at<float>(i,j);
+             lineInViewOne.at<double>(0,j)=lines2.at<float>(i,j);
+            lineInViewTwo.at<double>(0,j)=lines1.at<float>(i,j);
         }
-       
-       
-        double d = calculateDistance(line, matchedPoints_1[i]);
-        cout<<"Distance between Point "<<i<<" and corresponding line: "<<d<<endl;
+        double d2_tmp = calculateDistance(lineInViewTwo,matchedPoints_2[i]);
+        double d1_tmp = calculateDistance(lineInViewOne, matchedPoints_1[i]);
+
+        d1 += d1_tmp;
+        d2 += d2_tmp;
+        if(outliers.at<int>(i)==1){
+            d1_in+=d1_tmp;
+            d2_in+=d2_tmp;
+            countInliers+=1;
+        }
     }
-    
+    cout<<"Average distance in image 2 / inliers: "<<d2/matchedPoints_1.size()<<" / "<<d2_in/countInliers<<endl;
+    cout<<"Average distance in image 1 /inliers: "<<d1/matchedPoints_1.size()<<" / "<<d1_in/countInliers<<endl;
     
     waitKey();
     return 0;
