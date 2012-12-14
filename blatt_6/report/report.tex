@@ -114,4 +114,9 @@ The values denoted with $0.00$ are not actually $0$, but lie in the range of $10
 \label{fig:4}
 \end{figure}
 
+\FloatBarrier
+
+\section{Exercise 3}
+In exercise 3 we are asked to determine to coordinates of the epipole in the first image. For this, we need to determine the nullspace of the fundamental matrix $F$, since the epipole is the base vector of the nullspace ($F$ is of rank 2, so there is only one base vector). By computing the SVD of $F$, we can easily obtain a base for the nullspace of $F$, since it is simply the row of $Vt$ corresponding to the singular value which is zero. After obtaining this row, we need to divide by the third component to get actual image coordinates, since these are homogenous coordinates. Experimenting with multiple estimates, the epipole varies around the point (-3000, -100), which is outside the image on the left and a little bit to the top. This makes a lot of sense, since one one hand, the epilines seen in the image will intersect in that direction and on the other hand, the second image is taken from a standpoint to the left of the first image, so the epipole represents the camera position of image 2 in image 1.
+
 \end{document}

@@ -23,7 +23,7 @@ Mat view1,view2,outliers;
 
 
 void showandsave(string name, Mat img) {
-	//imwrite("data/res/" + name + ".png", img);
+	imwrite("data/res/" + name + ".png", img);
 	imshow(name, img);
 	waitKey();
 }
@@ -240,10 +240,16 @@ int main(int argc, const char * argv[])
     e.at<double>(0) = vt.at<double>(2,0);
     e.at<double>(1) = vt.at<double>(2,1);
     e.at<double>(2) = vt.at<double>(2,2);
+    e /= e.at<double>(2);
 
     cout << "Epipole: " << e << endl;
 
-    cout << "zeros: " << f*e << endl;
-
+//    Mat oneE = Mat::zeros((int)e.at<double>(1)+10,(int)e.at<double>(0)+10,CV_64F);
+//    vector<KeyPoint> kps;
+//    KeyPoint kp1(10.0,50.0,0.0);
+//    kps.push_back(kp1);
+//	view1 = imread("data/johnHunter/001.png", CV_LOAD_IMAGE_GRAYSCALE);
+//    drawKeypoints(view1,kps,view1);
+//    showandsave("kptest",view1);
     return 0;
 }
