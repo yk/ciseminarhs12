@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin5]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx,subfig}
+\usepackage{placeins}
+\usepackage{gensymb}
+
+\author{Alexander Attinger, Yannic Kilcher}
+\title{Report Blatt 6, Advanced Part}
+
+\begin{document}
+\maketitle
+
+\section{Affine Fundamental Matrix}
+\paragraph{a}
+It is to be shown that all epipolar lines resulting from an affine fundamental matrix are parallel.
+
+Our affine fundamental matrix will be:
+
+\[
+\begin{array}{lc}
+F_{A} = & \left(\begin{array}{@{}ccc@{}}
+                    0 & 0 & a \\
+                    0 & 0 & b \\
+                    e & d & c
+                  \end{array}\right)\\ [15pt]
+  
+\end{array} 
+\]
+
+If we calculate an epipolar line $l=Fx$ with $x=(u,v,1)$, we obtain $l=(a,b,c+dv+eu)$.\\
+We can form this into the line equation $ai+bj+(c+dv+eu) = 0$ ($i$ and $j$ being the new image coordinates) and finally to $j=(a/b)i + (c+dv+eu)/b$ with the elevation of the line ($a/b$) being independent of $u$ and $v$.
+Therefore, for all input $x$, this line will have the same elevation and therefore, all these lines are parallel.
+
+\paragraph{b}
+We have used the Zisserman algorithm to estimate the affine fundamental matrix with the correspondances from the basic part of the exercises.
+For that, we centered the aligned correspondances and then calculated the SVD on them. The parameters of the fundamental matrix can then be obtained
+from the singular vector corresponding to the smallest singular value.
+
+Our affine fundamental matrix turned out to be:
+
+\[
+\begin{array}{lc}
+F_{A} = & \left(\begin{array}{@{}ccc@{}}
+                    0 & 0 & -0.792 \\
+                    0 & 0 & -0.110 \\
+                    0.579 & 0.162 & 23.244
+                  \end{array}\right)\\ [15pt]
+  
+\end{array} 
+\]
+
+\paragraph{c}
+We have used the RANSAC algorithm to produce many estimates of the fundamental matrix by using only 5 random correspondances for each estimate.
+We have kept the one having the best score, which turned out to be (after 1000 trials).
+
+\[
+\begin{array}{lc}
+F_{A} = & \left(\begin{array}{@{}ccc@{}}
+                    0 & 0 & -0.275 \\
+                    0 & 0 & -0.847 \\
+                    0.425 & 0.160 & -22.763
+                  \end{array}\right)\\ [15pt]
+  
+\end{array} 
+\]
+
+
+\end{document}
