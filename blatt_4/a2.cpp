@@ -127,15 +127,28 @@ void watershit() {
 	showandsave("markers_after_" + to_string(diskSize), ms);
 }
 
-Point toucP1(455, 185);
-Point toucP2(810, 690);
+#define use_toucan 1
 
 void ml() {
-	Mat img = imread("data/toucan.jpg", CV_LOAD_IMAGE_COLOR);
+#if use_toucan
+Point toucP1(455, 185); //toucan
+Point toucP2(810, 690);
+string imname = "toucan";
+#else
+	Point toucP1(770, 95); //kitty
+	Point toucP2(1205, 555);
+	string imname = "kitty";
+#endif
+	Mat img = imread("data/" + imname + ".jpg", CV_LOAD_IMAGE_COLOR);
+	blur(img,img,Size(20,20));
+	blur(img,img,Size(20,20));
+	blur(img,img,Size(20,20));
+	blur(img,img,Size(20,20));
+	blur(img,img,Size(20,20));
 	Mat tmp;
 	img.copyTo(tmp);
 	rectangle(tmp, toucP1, toucP2, Scalar(255, 255, 255));
-	showandsave("toucan_bounding", tmp);
+	showandsave(imname + "_bounding", tmp);
 	vector<Mat> fgp, bgp;
 	for (int i = 0; i < img.cols; i++) {
 		for (int j = 0; j < img.rows; j++) {
@@ -152,8 +165,8 @@ void ml() {
 		}
 	}
 	Mat meanfg, meanbg, covfg, covbg;
-	calcCovarMatrix(&(fgp[0]),fgp.size(), covfg, meanfg, CV_COVAR_NORMAL);
-	calcCovarMatrix(&(bgp[0]),bgp.size(), covbg, meanbg, CV_COVAR_NORMAL);
+	calcCovarMatrix(&(fgp[0]), fgp.size(), covfg, meanfg, CV_COVAR_NORMAL);
+	calcCovarMatrix(&(bgp[0]), bgp.size(), covbg, meanbg, CV_COVAR_NORMAL);
 	Mat icfg, icbg;
 	invert(covfg, icfg);
 	invert(covbg, icbg);
@@ -193,7 +206,7 @@ void ml() {
 			}
 		}
 	}
-	showandsave("output_" + to_string(thresh),out);
+	showandsave(imname + "_output_" + to_string(thresh), out);
 
 }
 
