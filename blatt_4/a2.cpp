@@ -127,17 +127,19 @@ void watershit() {
 	showandsave("markers_after_" + to_string(diskSize), ms);
 }
 
-#define use_toucan 1
+#define use_toucan 0
 
 void ml() {
 #if use_toucan
 Point toucP1(455, 185); //toucan
 Point toucP2(810, 690);
 string imname = "toucan";
+float thresh = 1.0;
 #else
-	Point toucP1(770, 95); //kitty
-	Point toucP2(1205, 555);
-	string imname = "kitty";
+	Point toucP1(90, 70); //kitty
+	Point toucP2(240, 450);
+	string imname = "grabcut-dataset/388016";
+	float thresh = 5.0;
 #endif
 	Mat img = imread("data/" + imname + ".jpg", CV_LOAD_IMAGE_COLOR);
 	blur(img,img,Size(25,25));
@@ -196,7 +198,7 @@ string imname = "toucan";
 		return f/b;
 	};
 
-	float thresh = 1.0;
+
 
 	Mat out = Mat::zeros(img.rows, img.cols, CV_8U);
 	for (int x = 0; x < out.cols; x++) {

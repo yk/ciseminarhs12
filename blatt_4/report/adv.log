@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.12.26)  10 JAN 2013 09:09
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.12.26)  30 JAN 2013 18:47
 entering extended mode
  %&-line parsing enabled.
 **adv.tex
@@ -289,23 +289,75 @@ png (PNG copy)>] [3 <./data/res/adv/label_map_2.png (PNG copy)> <./data/res/adv
 ata/res/adv/label_map_50.png (PNG copy)>] [4 <./data/res/adv/markers_after_2.pn
 g (PNG copy)> <./data/res/adv/markers_after_10.png (PNG copy)> <./data/res/adv/
 markers_after_20.png (PNG copy)> <./data/res/adv/markers_after_50.png (PNG copy
-)>] (./adv.aux) ) 
+)>] <data/res/adv/toucan_bounding.png, id=28, 1027.84pt x 770.88pt>
+File: data/res/adv/toucan_bounding.png Graphic file (type png)
+
+<use data/res/adv/toucan_bounding.png>
+<data/res/adv/toucan_output_0_500000.png, id=29, 1027.84pt x 770.88pt>
+File: data/res/adv/toucan_output_0_500000.png Graphic file (type png)
+
+<use data/res/adv/toucan_output_0_500000.png>
+<data/res/adv/toucan_output_1_000000.png, id=30, 1027.84pt x 770.88pt>
+File: data/res/adv/toucan_output_1_000000.png Graphic file (type png)
+
+<use data/res/adv/toucan_output_1_000000.png>
+<data/res/adv/toucan_output_3_000000.png, id=31, 1027.84pt x 770.88pt>
+File: data/res/adv/toucan_output_3_000000.png Graphic file (type png)
+
+<use data/res/adv/toucan_output_3_000000.png>
+
+LaTeX Warning: Float too large for page by 45.80937pt on input line 83.
+
+
+<data/res/adv/grabcut-dataset/388016_bounding.png, id=32, 322.20375pt x 482.803
+76pt>
+File: data/res/adv/grabcut-dataset/388016_bounding.png Graphic file (type png)
+ <use data/res/adv/grabcut-dataset/388016_bounding.png>
+<data/res/adv/grabcut-dataset/388016_output_0_500000.png, id=33, 322.20375pt x 
+482.80376pt>
+File: data/res/adv/grabcut-dataset/388016_output_0_500000.png Graphic file (typ
+e png)
+ <use data/res/adv/grabcut-dataset/388016_output_0_500000.png>
+<data/res/adv/grabcut-dataset/388016_output_3_000000.png, id=34, 322.20375pt x 
+482.80376pt>
+File: data/res/adv/grabcut-dataset/388016_output_3_000000.png Graphic file (typ
+e png)
+ <use data/res/adv/grabcut-dataset/388016_output_3_000000.png>
+<data/res/adv/grabcut-dataset/388016_output_5_000000.png, id=35, 322.20375pt x 
+482.80376pt>
+File: data/res/adv/grabcut-dataset/388016_output_5_000000.png Graphic file (typ
+e png)
+ <use data/res/adv/grabcut-dataset/388016_output_5_000000.png>
+[5
+
+] [6 <./data/res/adv/toucan_bounding.png (PNG copy)> <./data/res/adv/toucan_out
+put_0_500000.png (PNG copy)> <./data/res/adv/toucan_output_1_000000.png (PNG co
+py)> <./data/res/adv/toucan_output_3_000000.png (PNG copy)>] [7 <./data/res/adv
+/grabcut-dataset/388016_bounding.png (PNG copy)> <./data/res/adv/grabcut-datase
+t/388016_output_0_500000.png (PNG copy)> <./data/res/adv/grabcut-dataset/388016
+_output_3_000000.png (PNG copy)> <./data/res/adv/grabcut-dataset/388016_output_
+5_000000.png (PNG copy)>] (./adv.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3329 strings out of 493848
- 46673 string characters out of 1152822
+ 3377 strings out of 493848
+ 48596 string characters out of 1152822
  115294 words of memory out of 3000000
- 6573 multiletter control sequences out of 15000+50000
- 9788 words of font info for 37 fonts, out of 3000000 for 9000
+ 6612 multiletter control sequences out of 15000+50000
+ 11036 words of font info for 42 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 44i,9n,45p,426b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/font
-s/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on adv.pdf (4 pages, 643990 bytes).
+ 44i,9n,45p,442b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmr9.pfb>
+Output written on adv.pdf (7 pages, 1861531 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

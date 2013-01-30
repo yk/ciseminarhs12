@@ -62,5 +62,40 @@ The watershed algorighm generally performs well, but a big problem is that once 
 
 \FloatBarrier
 
+\section{Maximum likelihood segmentation}
+We have implemented a gaussian maximum likelihood segmentation which learns from a bounding box marking foreground pixels. From that, we calculate two distributions - foreground and background - and then classify a pixel according to the ratio $r$ of the two likelihoods. For quality reasons, we have first blurred the image with a size 25 gaussian kernel to reduce noise when training and classifying.
+
+We have classified two images (Fig. \ref{fig:e4}/\ref{fig:e5}) with different values of $r$. As one can see when comparing Fig. \ref{fig:e5} to the grabcut segmentation of the same image in the report of the basic part, grabcut performs better than the ML approach, as grabcut also uses regional information about the pixels, whereas ML simply classifies according to color, not regarding the pixel's position in the image.
+
+\begin{figure}
+\centering
+\subfloat[][Original Blurred Image]{\includegraphics[scale=.18]{data/res/adv/toucan_bounding.png}}
+\quad
+\subfloat[][r = 0.5]{\includegraphics[scale=.18]{data/res/adv/toucan_output_0_500000.png}}
+\quad
+\subfloat[][r = 1.0]{\includegraphics[scale=.18]{data/res/adv/toucan_output_1_000000.png}}
+\quad
+\subfloat[][r = 3.0]{\includegraphics[scale=.18]{data/res/adv/toucan_output_3_000000.png}}
+\quad
+
+\caption{ML classification of the toucan image}%
+\label{fig:e4}
+\end{figure}
+
+\begin{figure}
+\centering
+\subfloat[][Original Blurred Image]{\includegraphics[scale=.3]{data/res/adv/grabcut-dataset/388016_bounding.png}}
+\quad
+\subfloat[][r = 0.5]{\includegraphics[scale=.3]{data/res/adv/grabcut-dataset/388016_output_0_500000.png}}
+\quad
+\subfloat[][r = 3.0]{\includegraphics[scale=.3]{data/res/adv/grabcut-dataset/388016_output_3_000000.png}}
+\quad
+\subfloat[][r = 5.0]{\includegraphics[scale=.3]{data/res/adv/grabcut-dataset/388016_output_5_000000.png}}
+\quad
+
+\caption{ML classification of a person}%
+\label{fig:e5}
+\end{figure}
+
 \end{document}
 

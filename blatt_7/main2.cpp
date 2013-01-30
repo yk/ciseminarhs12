@@ -13,11 +13,13 @@
 #include "opencv2/legacy/legacy.hpp"
 #include "opencv2/video/tracking.hpp"
 #include "opencv2/contrib/contrib.hpp"
+#include "opencv2/highgui/highgui.hpp"
 #include <pcl/point_cloud.h>
 #include <pcl/visualization/pcl_visualizer.h>
 #include <pcl/point_types.h>
 #include <pcl/impl/point_types.hpp>
 #include "boost/thread.hpp"
+#include <math.h>
 
 using namespace cv;
 using namespace std;
@@ -72,8 +74,8 @@ pair<pair<vector<KeyPoint>, vector<KeyPoint> >,
 	extractor.compute(view2, keypoints_2, descriptors_2);
 
 	//-- Step 3: Matching descriptor vectors with a brute force matcher
-	BruteForceMatcher<L2<float> > matcher;
-	std::vector<DMatch> matches;
+	BruteForceMatcher < L2<float> > matcher;
+	std::vector < DMatch > matches;
 	matcher.match(descriptors_1, descriptors_2, matches);
 
 	float thresh = 0.24;
@@ -81,7 +83,7 @@ pair<pair<vector<KeyPoint>, vector<KeyPoint> >,
 	auto newend =
 			remove_if(matches.begin(), matches.end(),
 					[&](DMatch& match)->bool {/*cout<<match.distance<<endl;*/return (abs(match.distance) > thresh);});
-	auto good_matches = vector<DMatch>(matches.begin(), newend);
+	auto good_matches = vector < DMatch > (matches.begin(), newend);
 	//-- Draw matches
 	Mat img_matches;
 	drawMatches(view1, keypoints_1, view2, keypoints_2, good_matches,
@@ -132,47 +134,51 @@ void setUpTrackbars() {
 	createTrackbar("p2", winname, &P2, 30000, processInput);
 }
 
-void show(Mat depth, Mat rectifiedImage){
-	cout << rectifiedImage.type() << endl;
-	int npixels = depth.rows*depth.cols;
-	  PointCloud<PointXYZRGB>::Ptr cloud( new PointCloud<PointXYZRGB>);
-	  cloud->width =npixels;
-	  cloud->height = 1;
-	  cloud->is_dense = false;
-	  cloud->points.resize(cloud->width*cloud->height);
+void show(Mat depth, Mat rectifiedImage) {
+	int npixels = depth.rows * depth.cols;
+	PointCloud<PointXYZRGB>::Ptr cloud(new PointCloud<PointXYZRGB>);
+	cloud->width = npixels;
+	cloud->height = 1;
+	cloud->is_dense = false;
+	cloud->points.resize(cloud->width * cloud->height);
 
-	  for (size_t m=0; m<rectifiedImage.rows; ++m)
-	  {
-	    for ( size_t n=0; n<rectifiedImage.cols; ++n)
-	    {
-	      cloud->points[m*depth.cols+n].x = n;
-	      cloud->points[m*depth.cols+n].y = m;
+	for (size_t m = 0; m < rectifiedImage.rows; ++m) {
+		for (size_t n = 0; n < rectifiedImage.cols; ++n) {
+			cloud->points[m * depth.cols + n].x = n;
+			cloud->points[m * depth.cols + n].y = m;
 //	      cloud->points[m*depth.cols+n].z = (float)depth.at<short>(m,n);
-	      cloud->points[m*depth.cols+n].z = (float)depth.at<short>(m,n);
+			cloud->points[m * depth.cols + n].z = ((float) depth.at<short>(m, n))/255.0;
 
 //	      cv::Vec3b col = rectifiedImage.at<cv::Vec3b>(m,n);
 //	      // pack r/g/b into rgb
 //	      uint8_t r = col[2], g = col[1], b = col[0];    // Example: Red color
 //	      uint32_t rgb = ((uint32_t)r << 16 | (uint32_t)g << 8 | (uint32_t)b);
 //	      cloud->points[m*depth.cols+n].rgb = *reinterpret_cast<float*>(&rgb);
-	      //FIXME rectifiedImage is grayscale, not 3-channel
-	    }
-	  }
+			//FIXME rectifiedImage is grayscale, not 3-channel
+			uint8_t r = (float) rectifiedImage.at<short>(m, n), g =
+					(float) rectifiedImage.at<short>(m, n), b =
+					(float) rectifiedImage.at<short>(m, n); // Example: Red color
+			uint32_t rgb = ((uint32_t) r << 16 | (uint32_t) g << 8
+					| (uint32_t) b);
+			cloud->points[m * depth.cols + n].rgb =
+					*reinterpret_cast<float*>(&rgb);
+		}
+	}
 
-	  boost::shared_ptr<visualization::PCLVisualizer> viewer (new visualization::PCLVisualizer ("3D Viewer"));
-	  visualization::PointCloudColorHandlerRGBField<PointXYZRGB> rgb(cloud);
-	  viewer->setBackgroundColor (0, 0, 0);
-	  viewer->addPointCloud<PointXYZRGB> (cloud, rgb,"sample cloud");
-	  viewer->setPointCloudRenderingProperties (visualization::PCL_VISUALIZER_POINT_SIZE, 2, "sample cloud");
-	  viewer->addCoordinateSystem (1.0);
-	  viewer->initCameraParameters ();
+	boost::shared_ptr<visualization::PCLVisualizer> viewer(
+			new visualization::PCLVisualizer("3D Viewer"));
+	visualization::PointCloudColorHandlerRGBField<PointXYZRGB> rgb(cloud);
+	viewer->setBackgroundColor(0, 0, 0);
+	viewer->addPointCloud < PointXYZRGB > (cloud, rgb, "sample cloud");
+	viewer->setPointCloudRenderingProperties(
+			visualization::PCL_VISUALIZER_POINT_SIZE, 2, "sample cloud");
+	viewer->addCoordinateSystem(1.0);
+	viewer->initCameraParameters();
 
-
-	  while (!viewer->wasStopped ())
-	  {
-	      viewer->spinOnce (100);
-	      boost::this_thread::sleep (boost::posix_time::microseconds (100000));
-	  }
+	while (!viewer->wasStopped()) {
+		viewer->spinOnce(100);
+		boost::this_thread::sleep(boost::posix_time::microseconds(100000));
+	}
 }
 
 int main3() {
@@ -205,51 +211,69 @@ int main3() {
 //    imshow("Rectified 1",dest1);
 //    imshow("Rectified 2",dest2);
 	//do the matching
-    setUpTrackbars();
+	setUpTrackbars();
 	processInput(0, 0);
 
 //	PointCloud<point> pc;
 
 	waitKey();
-	showandsave("dest1",dest1);
-	normalize(dispMap,dispMap,0.0,1.0,CV_MINMAX);
-	show(dispMap,dest1);
+	showandsave("dest1", dest1);
+	normalize(dispMap, dispMap, 0, 255, NORM_MINMAX, CV_8UC1);
+	show(dispMap, dest1);
 	return 0;
 }
 
 int main4() {
 	Mat car1 = imread("data/car/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
 	Mat car2 = imread("data/car/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
-
-	auto ps = match(car1, car2);
+//	auto ps = match(car1, car2);
 //	auto mkps =  ps.first;
 //	auto matchedKeyPoints_1 = mkps.first;
 //	auto matchedKeyPoints_2 = mkps.second;
-	auto mps = ps.second;
-	auto matchedPoints_1 = mps.first;
+//	auto mps = ps.second;
+//	auto matchedPoints_1 = mps.first;
 //	auto matchedPoints_2 = mps.second;
-
-	vector<Point2f> nextPts;
-	Mat status, err;
-	calcOpticalFlowPyrLK(car1, car2, matchedPoints_1, nextPts, status, err);
-
-	Mat out = Mat::zeros(car1.rows, car1.cols,CV_32FC2);
-	for (auto it = matchedPoints_1.begin(), it2 = nextPts.begin();
-			it != matchedPoints_1.end(), it2 != nextPts.end(); it++, it2++) {
-		auto flow = *it2-*it;
-		auto p = out.at<Point2f>((int)(it->x),(int)(it->y));
-		p.x = flow.x;
-		p.y = flow.y;
+//	Mat prevPts = Mat::zeros(car1.rows, car1.cols, CV_32FC2);
+	vector < Point2f > prevPts;
+	for (int i = 0; i < car1.rows; i++) {
+		for (int j = 0; j < car1.cols; j++) {
+//			prevPts.at < Point2f > (i, j) = Point2f(i, j);
+			prevPts.push_back(Point2f(j, i));
+		}
 	}
-
-	Mat cm_out;
+	vector < Point2f > nextPts;
+	Mat status, err;
+	calcOpticalFlowPyrLK(car1, car2, prevPts, nextPts, status, err);
+//	Mat out = Mat::zeros(car1.rows, car1.cols, CV_32FC2);
+//	for (int i = 0; i < car1.rows; i++) {
+//		for (int j = 0; j < car1.cols; j++) {
+//			out.at < Point2f > (i, j) = nextPts.at < Point2f > (i, j);
+//		}
+//	}
+	Mat out = Mat::zeros(car1.rows, car1.cols, CV_32F);
+	for (int i = 0; i < car1.rows; i++) {
+		for (int j = 0; j < car1.cols; j++) {
+			Point2f p = nextPts[i * car1.cols + j];
+			out.at<float>(i, j) = (atan2(p.y, p.x) + M_PI) / (2 * M_PI);
+		}
+	}
 	//now apply color map
-
-	showandsave("optical_flow", cm_out);
+	Mat out_cm;
+	normalize(out, out_cm, 0, 255, NORM_MINMAX, CV_8UC1);
+	showandsave("optical_flow_direction", out_cm);
+	for (int i = 0; i < car1.rows; i++) {
+		for (int j = 0; j < car1.cols; j++) {
+			Point2f p = nextPts[i * car1.cols + j];
+			out.at<float>(i, j) = sqrt(p.x * p.x + p.y * p.y);
+		}
+	}
+	//now apply color map
+	normalize(out, out_cm, 0, 255, NORM_MINMAX, CV_8UC1);
+	showandsave("optical_flow_norm", out_cm);
 	return 0;
 }
 
-int main(){
+int main() {
 	main3();
 //	main4();
 	return 0;
