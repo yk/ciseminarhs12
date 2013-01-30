@@ -1,0 +1,8 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+USER_OBJS :=
+
+LIBS := -lopencv_core -lvtkIO -lvtkproj4 -lvtkalglib -lvtkFiltering -lvtkGenericFiltering -lvtkImaging -lvtkGraphics -lvtkRendering -lopencv_video -lopencv_highgui -lopencv_imgproc -lopencv_features2d -lopencv_calib3d -lopencv_legacy -lpcl_common -lpcl_visualization -lpcl_features -lpcl_keypoints -lpcl_octree -lpcl_tracking -lvtkCommon -lboost_thread
+

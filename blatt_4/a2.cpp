@@ -188,7 +188,7 @@ string imname = "toucan";
 		return f/b;
 	};
 
-	double thresh = 1.0;
+	double thresh = 1.16;
 
 	Mat out = Mat::zeros(img.rows, img.cols, CV_8U);
 	for (int x = 0; x < out.cols; x++) {

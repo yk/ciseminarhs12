@@ -177,10 +177,10 @@ void show(Mat depth, Mat rectifiedImage){
 
 int main3() {
 	//EX 1
-//	view1 = imread("data/johnHunter/001.png", CV_LOAD_IMAGE_GRAYSCALE);
-//	view2 = imread("data/johnHunter/002.png", CV_LOAD_IMAGE_GRAYSCALE);
-	view1 = imread("data/table/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
-	view2 = imread("data/table/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
+	view1 = imread("data/johnHunter/001.png", CV_LOAD_IMAGE_GRAYSCALE);
+	view2 = imread("data/johnHunter/002.png", CV_LOAD_IMAGE_GRAYSCALE);
+//	view1 = imread("data/table/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
+//	view2 = imread("data/table/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
 	showandsave("johnHunter1", view1);
 	auto ps = match(view1, view2);
 	auto mkps = ps.first;

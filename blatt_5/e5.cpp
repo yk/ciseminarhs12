@@ -308,7 +308,7 @@ int main() {
 //	harris();
 //	match();
 //	ransac();
-	ransacmatch();
-//	easySIFT();
+//	ransacmatch();
+	easySIFT();
 }
 
