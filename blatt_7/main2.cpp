@@ -30,7 +30,7 @@ std::vector<KeyPoint> matchedKeyPoints_1, matchedKeyPoints_2;
 Mat view1, view2, outliers;
 
 void showandsave(string name, Mat img) {
-	//imwrite("data/res/" + name + ".png", img);
+	imwrite("data/res/" + name + ".png", img);
 	imshow(name, img);
 	waitKey();
 }
@@ -185,8 +185,6 @@ int main3() {
 	//EX 1
 	view1 = imread("data/johnHunter/001.png", CV_LOAD_IMAGE_GRAYSCALE);
 	view2 = imread("data/johnHunter/002.png", CV_LOAD_IMAGE_GRAYSCALE);
-//	view1 = imread("data/table/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
-//	view2 = imread("data/table/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
 	showandsave("johnHunter1", view1);
 	auto ps = match(view1, view2);
 	auto mkps = ps.first;
@@ -226,6 +224,10 @@ int main3() {
 int main4() {
 	Mat car1 = imread("data/car/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
 	Mat car2 = imread("data/car/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
+	string name = "car";
+//	Mat car1 = imread("data/table/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
+//	Mat car2 = imread("data/table/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
+//	string name = "table";
 //	auto ps = match(car1, car2);
 //	auto mkps =  ps.first;
 //	auto matchedKeyPoints_1 = mkps.first;
@@ -238,7 +240,7 @@ int main4() {
 	for (int i = 0; i < car1.rows; i++) {
 		for (int j = 0; j < car1.cols; j++) {
 //			prevPts.at < Point2f > (i, j) = Point2f(i, j);
-			prevPts.push_back(Point2f(i, j));
+			prevPts.push_back(Point2f(j, i));
 		}
 	}
 	vector < Point2f > nextPts;
@@ -253,23 +255,23 @@ int main4() {
 	Mat out = Mat::zeros(car1.rows, car1.cols, CV_32F);
 	for (int i = 0; i < car1.rows; i++) {
 		for (int j = 0; j < car1.cols; j++) {
-			Point2f p = nextPts[i * car1.cols + j];
-			out.at<float>(i, j) = (atan2(p.y, p.x) + M_PI) / (2 * M_PI);
+			Point2f p =  nextPts[i * car1.cols + j] - prevPts[i*car1.cols+j];
+			out.at<float>(i, j) = ((atan2(p.y, p.x) + M_PI) / (2 * M_PI));
 		}
 	}
 	//now apply color map
 	Mat out_cm;
 	normalize(out, out_cm, 0, 255, NORM_MINMAX, CV_8UC1);
-	showandsave("optical_flow_direction", out_cm);
+	showandsave("optical_flow_direction_"+name, out_cm);
 	for (int i = 0; i < car1.rows; i++) {
 		for (int j = 0; j < car1.cols; j++) {
-			Point2f p = nextPts[i * car1.cols + j];
-			out.at<float>(i, j) = sqrt(p.x * p.x + p.y * p.y);
+			Point2f p = nextPts[i * car1.cols + j] - prevPts[i*car1.cols+j];
+			out.at<float>(i, j) = pow(p.x * p.x + p.y * p.y,0.025);
 		}
 	}
 	//now apply color map
 	normalize(out, out_cm, 0, 255, NORM_MINMAX, CV_8UC1);
-	showandsave("optical_flow_norm", out_cm);
+	showandsave("optical_flow_norm_"+name, out_cm);
 	Mat oimg;
 	normalize(car1, oimg, 0, 255, NORM_MINMAX, CV_8UC1);
 	show(out_cm,oimg);
