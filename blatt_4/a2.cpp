@@ -140,11 +140,11 @@ string imname = "toucan";
 	string imname = "kitty";
 #endif
 	Mat img = imread("data/" + imname + ".jpg", CV_LOAD_IMAGE_COLOR);
-	blur(img,img,Size(20,20));
-	blur(img,img,Size(20,20));
-	blur(img,img,Size(20,20));
-	blur(img,img,Size(20,20));
-	blur(img,img,Size(20,20));
+	blur(img,img,Size(25,25));
+//	blur(img,img,Size(20,20));
+//	blur(img,img,Size(20,20));
+//	blur(img,img,Size(20,20));
+//	blur(img,img,Size(20,20));
 	Mat tmp;
 	img.copyTo(tmp);
 	rectangle(tmp, toucP1, toucP2, Scalar(255, 255, 255));
@@ -153,10 +153,10 @@ string imname = "toucan";
 	for (int i = 0; i < img.cols; i++) {
 		for (int j = 0; j < img.rows; j++) {
 			Vec3b vpix = img.at<Vec3b>(j, i);
-			Mat pix(3, 1, CV_8U);
-			pix.at<uchar>(0, 0) = vpix[0];
-			pix.at<uchar>(1, 0) = vpix[1];
-			pix.at<uchar>(2, 0) = vpix[2];
+			Mat pix(3, 1, CV_64F);
+			pix.at<double>(0, 0) = (double)vpix[0];
+			pix.at<double>(1, 0) = (double)vpix[1];
+			pix.at<double>(2, 0) = (double)vpix[2];
 			if (i < toucP1.x || i > toucP2.x || j < toucP1.y || j > toucP2.y) {
 				bgp.push_back(pix);
 			} else {
@@ -165,11 +165,19 @@ string imname = "toucan";
 		}
 	}
 	Mat meanfg, meanbg, covfg, covbg;
-	calcCovarMatrix(&(fgp[0]), fgp.size(), covfg, meanfg, CV_COVAR_NORMAL);
-	calcCovarMatrix(&(bgp[0]), bgp.size(), covbg, meanbg, CV_COVAR_NORMAL);
+	calcCovarMatrix(&(fgp[0]), fgp.size(), covfg, meanfg, CV_COVAR_NORMAL | CV_COVAR_SCALE);
+	calcCovarMatrix(&(bgp[0]), bgp.size(), covbg, meanbg, CV_COVAR_NORMAL | CV_COVAR_SCALE);
 	Mat icfg, icbg;
 	invert(covfg, icfg);
 	invert(covbg, icbg);
+	cout << "mufg" << endl;
+	cout << meanfg << endl;
+	cout << "covfg" << endl;
+	cout << covfg << endl;
+	cout << "mubg" << endl;
+	cout << meanbg << endl;
+	cout << "covbg" << endl;
+	cout << covbg << endl;
 	double d = 3;
 	double prefg = 1.0 / (pow(2.0 * M_PI, d / 2.0) * sqrt(determinant(covfg)));
 	double prebg = 1.0 / (pow(2.0 * M_PI, d / 2.0) * sqrt(determinant(covbg)));
@@ -179,16 +187,16 @@ string imname = "toucan";
 		Mat tfgdiff;
 		transpose(fgdiff,tfgdiff);
 		Mat fgexp = tfgdiff*icfg*fgdiff;
-		double f = prefg*exp(-0.5*fgexp.at<float>(0,0));
+		double f = prefg*exp(-0.5*fgexp.at<double>(0,0));
 		Mat bgdiff = xf - meanbg;
 		Mat tbgdiff;
 		transpose(bgdiff,tbgdiff);
 		Mat bgexp = tbgdiff*icbg*bgdiff;
-		double b = prebg*exp(-0.5*bgexp.at<float>(0,0));
+		double b = prebg*exp(-0.5*bgexp.at<double>(0,0));
 		return f/b;
 	};
 
-	double thresh = 1.16;
+	float thresh = 1.0;
 
 	Mat out = Mat::zeros(img.rows, img.cols, CV_8U);
 	for (int x = 0; x < out.cols; x++) {
@@ -198,7 +206,7 @@ string imname = "toucan";
 			pix.at<uchar>(0, 0) = vpix[0];
 			pix.at<uchar>(1, 0) = vpix[1];
 			pix.at<uchar>(2, 0) = vpix[2];
-			double tp = t(pix);
+			float tp = t(pix);
 			if (tp >= thresh) {
 				out.at<uchar>(y, x) = 255;
 			} else {
