@@ -147,7 +147,7 @@ void show(Mat depth, Mat rectifiedImage) {
 			cloud->points[m * depth.cols + n].x = n;
 			cloud->points[m * depth.cols + n].y = m;
 //	      cloud->points[m*depth.cols+n].z = (float)depth.at<short>(m,n);
-			cloud->points[m * depth.cols + n].z = ((float) depth.at<short>(m, n))/255.0;
+			cloud->points[m * depth.cols + n].z = ((float) depth.at<char>(m, n));
 
 //	      cv::Vec3b col = rectifiedImage.at<cv::Vec3b>(m,n);
 //	      // pack r/g/b into rgb
@@ -155,9 +155,9 @@ void show(Mat depth, Mat rectifiedImage) {
 //	      uint32_t rgb = ((uint32_t)r << 16 | (uint32_t)g << 8 | (uint32_t)b);
 //	      cloud->points[m*depth.cols+n].rgb = *reinterpret_cast<float*>(&rgb);
 			//FIXME rectifiedImage is grayscale, not 3-channel
-			uint8_t r = (float) rectifiedImage.at<short>(m, n), g =
-					(float) rectifiedImage.at<short>(m, n), b =
-					(float) rectifiedImage.at<short>(m, n); // Example: Red color
+			uint8_t r = (float) rectifiedImage.at<char>(m, n), g =
+					(float) rectifiedImage.at<char>(m, n), b =
+					(float) rectifiedImage.at<char>(m, n); // Example: Red color
 			uint32_t rgb = ((uint32_t) r << 16 | (uint32_t) g << 8
 					| (uint32_t) b);
 			cloud->points[m * depth.cols + n].rgb =
@@ -238,7 +238,7 @@ int main4() {
 	for (int i = 0; i < car1.rows; i++) {
 		for (int j = 0; j < car1.cols; j++) {
 //			prevPts.at < Point2f > (i, j) = Point2f(i, j);
-			prevPts.push_back(Point2f(j, i));
+			prevPts.push_back(Point2f(i, j));
 		}
 	}
 	vector < Point2f > nextPts;
@@ -270,6 +270,9 @@ int main4() {
 	//now apply color map
 	normalize(out, out_cm, 0, 255, NORM_MINMAX, CV_8UC1);
 	showandsave("optical_flow_norm", out_cm);
+	Mat oimg;
+	normalize(car1, oimg, 0, 255, NORM_MINMAX, CV_8UC1);
+	show(out_cm,oimg);
 	return 0;
 }
 
