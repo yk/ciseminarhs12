@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  9 JAN 2013 11:40
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.5.14)  30 JAN 2013 12:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -192,11 +192,7 @@ Package: placeins 2005/04/18  v 2.2
 )
 (/usr/local/texlive/2011/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
-) (./report.aux
-
-LaTeX Warning: Label `fig:7' multiply defined.
-
-)
+) (./report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -211,7 +207,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
- (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
 \scratchdimen=\dimen122
@@ -321,65 +318,61 @@ File: img/filteredImage2.png Graphic file (type png)
 <use img/filteredImage2.png>
 Package pdftex.def Info: img/filteredImage2.png used on input line 37.
 (pdftex.def)             Requested size: 134.20338pt x 90.28865pt.
-
-
-LaTeX Warning: Reference `fig:8' on page 1 undefined on input line 43.
-
-<img/100.jpg, id=5, 385.44pt x 256.96pt>
+ <img/100.jpg, id=5, 385.44pt x 256.96pt>
 File: img/100.jpg Graphic file (type jpg)
- <use img/100.jpg>
+
+<use img/100.jpg>
 Package pdftex.def Info: img/100.jpg used on input line 48.
 (pdftex.def)             Requested size: 96.35976pt x 64.23984pt.
-
-<img/100water.png, id=6, 380.42125pt x 257.96375pt>
+ <img/100water.png, id=6, 380.42125pt x 257.96375pt>
 File: img/100water.png Graphic file (type png)
- <use img/100water.png>
+
+<use img/100water.png>
 Package pdftex.def Info: img/100water.png used on input line 50.
 (pdftex.def)             Requested size: 95.10507pt x 64.49077pt.
-
-<img/100person.png, id=7, 382.42876pt x 255.95625pt>
+ <img/100person.png, id=7, 382.42876pt x 255.95625pt>
 File: img/100person.png Graphic file (type png)
- <use img/100person.png>
+
+<use img/100person.png>
 Package pdftex.def Info: img/100person.png used on input line 52.
 (pdftex.def)             Requested size: 95.60695pt x 63.98889pt.
-
-<img/100sand.png, id=8, 383.4325pt x 256.96pt>
+ <img/100sand.png, id=8, 383.4325pt x 256.96pt>
 File: img/100sand.png Graphic file (type png)
- <use img/100sand.png>
+
+<use img/100sand.png>
 Package pdftex.def Info: img/100sand.png used on input line 54.
 (pdftex.def)             Requested size: 95.85788pt x 64.23984pt.
-
-<img/305.jpg, id=9, 385.44pt x 256.96pt>
+ <img/305.jpg, id=9, 385.44pt x 256.96pt>
 File: img/305.jpg Graphic file (type jpg)
- <use img/305.jpg>
+
+<use img/305.jpg>
 Package pdftex.def Info: img/305.jpg used on input line 61.
 (pdftex.def)             Requested size: 96.35976pt x 64.23984pt.
-
-<img/305blacktop.png, id=10, 385.44pt x 257.96375pt>
+ <img/305blacktop.png, id=10, 385.44pt x 257.96375pt>
 File: img/305blacktop.png Graphic file (type png)
- <use img/305blacktop.png>
+
+<use img/305blacktop.png>
 Package pdftex.def Info: img/305blacktop.png used on input line 63.
 (pdftex.def)             Requested size: 96.35976pt x 64.49077pt.
-
-<img/305white.png, id=11, 381.425pt x 253.94875pt>
+ <img/305white.png, id=11, 381.425pt x 253.94875pt>
 File: img/305white.png Graphic file (type png)
- <use img/305white.png>
+
+<use img/305white.png>
 Package pdftex.def Info: img/305white.png used on input line 65.
 (pdftex.def)             Requested size: 95.356pt x 63.48703pt.
-
-<img/305blue.png, id=12, 384.43625pt x 257.96375pt>
+ <img/305blue.png, id=12, 384.43625pt x 257.96375pt>
 File: img/305blue.png Graphic file (type png)
- <use img/305blue.png>
+
+<use img/305blue.png>
 Package pdftex.def Info: img/305blue.png used on input line 67.
 (pdftex.def)             Requested size: 96.10883pt x 64.49077pt.
-
-<img/407.jpg, id=13, 385.44pt x 256.96pt>
+ <img/407.jpg, id=13, 385.44pt x 256.96pt>
 File: img/407.jpg Graphic file (type jpg)
- <use img/407.jpg>
+
+<use img/407.jpg>
 Package pdftex.def Info: img/407.jpg used on input line 74.
 (pdftex.def)             Requested size: 96.35976pt x 64.23984pt.
-
-<img/407backgrnd.png, id=14, 380.42125pt x 255.95625pt>
+ <img/407backgrnd.png, id=14, 380.42125pt x 255.95625pt>
 File: img/407backgrnd.png Graphic file (type png)
 
 <use img/407backgrnd.png>
@@ -450,25 +443,25 @@ File: img/808.jpg Graphic file (type jpg)
 
 <use img/808.jpg>
 Package pdftex.def Info: img/808.jpg used on input line 113.
-(pdftex.def)             Requested size: 64.23984pt x 96.35976pt.
+(pdftex.def)             Requested size: 115.63092pt x 173.4464pt.
  <img/808green.png, id=26, 256.96pt x 386.44376pt>
 File: img/808green.png Graphic file (type png)
 
 <use img/808green.png>
 Package pdftex.def Info: img/808green.png used on input line 115.
-(pdftex.def)             Requested size: 64.23984pt x 96.6107pt.
+(pdftex.def)             Requested size: 115.63092pt x 173.89807pt.
  <img/808snow.png, id=27, 254.9525pt x 385.44pt>
 File: img/808snow.png Graphic file (type png)
 
 <use img/808snow.png>
 Package pdftex.def Info: img/808snow.png used on input line 117.
-(pdftex.def)             Requested size: 63.73796pt x 96.35976pt.
+(pdftex.def)             Requested size: 114.72755pt x 173.4464pt.
  <img/808water.png, id=28, 253.94875pt x 382.42876pt>
 File: img/808water.png Graphic file (type png)
 
 <use img/808water.png>
 Package pdftex.def Info: img/808water.png used on input line 119.
-(pdftex.def)             Requested size: 63.48703pt x 95.60695pt.
+(pdftex.def)             Requested size: 114.27588pt x 172.09134pt.
  [1
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/f
@@ -479,33 +472,26 @@ mage2.png> <./img/100.jpg> <./img/100water.png> <./img/100person.png> <./img/10
 ./img/407whitebody.png> <./img/409.jpg> <./img/409backgrnd.png> <./img/409body.
 png> <./img/409head.png> <./img/602.jpg> <./img/602middle.png> <./img/602green.
 png> <./img/602bright.png>] [4 <./img/808.jpg> <./img/808green.png> <./img/808s
-now.png> <./img/808water.png>] [5] (./report.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+now.png> <./img/808water.png>] [5] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 3987 strings out of 493633
- 58218 string characters out of 3143377
- 131479 words of memory out of 3000000
- 7197 multiletter control sequences out of 15000+200000
- 11344 words of font info for 43 fonts, out of 3000000 for 9000
+ 3982 strings out of 493633
+ 58134 string characters out of 3143377
+ 130448 words of memory out of 3000000
+ 7192 multiletter control sequences out of 15000+200000
+ 10096 words of font info for 38 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 44i,9n,45p,1159b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
-ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on report.pdf (5 pages, 1597174 bytes).
+ 44i,9n,45p,486b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2011/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2011/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2011/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2011/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on report.pdf (5 pages, 1586172 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
