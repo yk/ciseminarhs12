@@ -127,7 +127,7 @@ void watershit() {
 	showandsave("markers_after_" + to_string(diskSize), ms);
 }
 
-#define use_toucan 0
+#define use_toucan 1
 
 void ml() {
 #if use_toucan

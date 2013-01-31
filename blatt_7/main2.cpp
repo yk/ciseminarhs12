@@ -117,7 +117,7 @@ void processInput(int, void*) {
 	int _SADsize = SADSize;
 	StereoSGBM bm(_minDisp, _numDisp, _SADsize, P1, P2);
 	bm(dest1, dest2, dispMap);
-	normalize(dispMap, dispMap, 0, 256, CV_MINMAX, NULL);
+	normalize(dispMap, dispMap, 0, 255, CV_MINMAX, NULL);
 	//applyColorMap(dispMap, dispMap, cv::COLORMAP_JET);
 	//Mat disp_vis = Mat(dispMap.size(), CV_8U);
 	//convertScaleAbs(dispMap, disp_vis);
@@ -147,7 +147,7 @@ void show(Mat depth, Mat rectifiedImage) {
 			cloud->points[m * depth.cols + n].x = n;
 			cloud->points[m * depth.cols + n].y = m;
 //	      cloud->points[m*depth.cols+n].z = (float)depth.at<short>(m,n);
-			cloud->points[m * depth.cols + n].z = ((float) depth.at<char>(m, n));
+			cloud->points[m * depth.cols + n].z = ((float) depth.at<uchar>(m, n));
 
 //	      cv::Vec3b col = rectifiedImage.at<cv::Vec3b>(m,n);
 //	      // pack r/g/b into rgb
@@ -155,9 +155,9 @@ void show(Mat depth, Mat rectifiedImage) {
 //	      uint32_t rgb = ((uint32_t)r << 16 | (uint32_t)g << 8 | (uint32_t)b);
 //	      cloud->points[m*depth.cols+n].rgb = *reinterpret_cast<float*>(&rgb);
 			//FIXME rectifiedImage is grayscale, not 3-channel
-			uint8_t r = (float) rectifiedImage.at<char>(m, n), g =
-					(float) rectifiedImage.at<char>(m, n), b =
-					(float) rectifiedImage.at<char>(m, n); // Example: Red color
+			uint8_t r = (float) rectifiedImage.at<uchar>(m, n), g =
+					(float) rectifiedImage.at<uchar>(m, n), b =
+					(float) rectifiedImage.at<uchar>(m, n); // Example: Red color
 			uint32_t rgb = ((uint32_t) r << 16 | (uint32_t) g << 8
 					| (uint32_t) b);
 			cloud->points[m * depth.cols + n].rgb =
@@ -216,18 +216,19 @@ int main3() {
 
 	waitKey();
 	showandsave("dest1", dest1);
-	normalize(dispMap, dispMap, 0, 255, NORM_MINMAX, CV_8UC1);
+	Mat outDisp;
+	normalize(dispMap, outDisp, 0, 255, NORM_MINMAX, CV_8UC1);
 	show(dispMap, dest1);
 	return 0;
 }
 
 int main4() {
-	Mat car1 = imread("data/car/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
-	Mat car2 = imread("data/car/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
-	string name = "car";
-//	Mat car1 = imread("data/table/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
-//	Mat car2 = imread("data/table/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
-//	string name = "table";
+//	Mat car1 = imread("data/car/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
+//	Mat car2 = imread("data/car/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
+//	string name = "car";
+	Mat car1 = imread("data/table/input1.png", CV_LOAD_IMAGE_GRAYSCALE);
+	Mat car2 = imread("data/table/input2.png", CV_LOAD_IMAGE_GRAYSCALE);
+	string name = "table";
 //	auto ps = match(car1, car2);
 //	auto mkps =  ps.first;
 //	auto matchedKeyPoints_1 = mkps.first;
